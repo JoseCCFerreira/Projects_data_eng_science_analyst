@@ -13,3 +13,6 @@
 - Criada a documentacao HTML central em `docs_html/`.
 - Adicionada a academia da stack na dashboard: Git, dbt, SQLite relacional, DuckDB, statistical analysis, ML, Streamlit e resultados.
 - Criado `PROJECT_REGISTRY.md` com o inventario e contrato dos projetos dentro de `projects/`.
+- Adicionada a vista `Serviços` para instalar dependencias, arrancar/parar apps individuais e correr pipelines a partir do Projecto Manager.
+- Adicionada a vista `Teoria` bilingue com formulas, exemplos e uso nos projetos.
+- Criadas as paginas HTML `docs_html/theory.html` e `docs_html/services.html`.

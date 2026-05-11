@@ -20,3 +20,14 @@ Este repositorio central organiza os projetos locais que vivem dentro de `projec
 3. A dashboard central le documentacao, dados e bases de dados sem reescrever os subprojetos.
 4. As alteracoes globais ficam registadas em `CHANGELOG.md`.
 5. As alteracoes de cada projeto ficam no changelog do respetivo projeto, quando existir.
+
+## Servicos Integrados
+
+| Projeto | Porta | App | Pipeline |
+| --- | ---: | --- | --- |
+| `global_fuel_shocks_intelligence_repo` | 8610 | `app.py` | `scripts/run_pipeline.py` |
+| `citibike_ebike_performance_repo` | 8611 | `streamlit/app.py` | `python/run_pipeline.py` |
+| `portugal_bike_geospatial_ml_repo` | 8612 | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_analytics_learning_repo` | 8613 | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_case_repo_with_dynamic_beginner_html` | 8614 | `streamlit/app.py` | `python/run_pipeline.py` |
+| `tyrewear_intelligence_landing` | 8615 | `app.py` | n/a |

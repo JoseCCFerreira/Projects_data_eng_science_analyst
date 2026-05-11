@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .venv*/
 .streamlit/
+logs/
 
 # Os projetos vivem fisicamente dentro da casa-mae, mas mantêm o seu Git proprio.
 # O repositorio central documenta e orquestra; nao versiona o conteudo interno deles.
