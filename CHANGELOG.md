@@ -15,3 +15,5 @@
 - Added the Theory view with mathematical and statistical formulas, examples and project usage.
 - Added dashboard links and project context pages for creation purpose, business context, programming, code, results and machine learning.
 - Converted the central hub interface and documentation to English.
+- Added repository links to the central access panel, README, registry and dashboard documentation.
+- Verified that all six project Streamlit dashboards start and respond successfully.

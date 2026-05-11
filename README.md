@@ -47,14 +47,14 @@ The central panel gives access to:
 
 ## Project Dashboard Links
 
-| Project | Dashboard | App entrypoint | Pipeline |
-| --- | --- | --- | --- |
-| `global_fuel_shocks_intelligence_repo` | `http://localhost:8610` | `app.py` | `scripts/run_pipeline.py` |
-| `citibike_ebike_performance_repo` | `http://localhost:8611` | `streamlit/app.py` | `python/run_pipeline.py` |
-| `portugal_bike_geospatial_ml_repo` | `http://localhost:8612` | `streamlit/app.py` | `python/run_pipeline.py` |
-| `retail_analytics_learning_repo` | `http://localhost:8613` | `streamlit/app.py` | `python/run_pipeline.py` |
-| `retail_case_repo_with_dynamic_beginner_html` | `http://localhost:8614` | `streamlit/app.py` | `python/run_pipeline.py` |
-| `tyrewear_intelligence_landing` | `http://localhost:8615` | `app.py` | n/a |
+| Project | Repository | Dashboard | App entrypoint | Pipeline |
+| --- | --- | --- | --- | --- |
+| `global_fuel_shocks_intelligence_repo` | <https://github.com/JoseCCFerreira/global-fuel-shocks-intelligence.git> | `http://localhost:8610` | `app.py` | `scripts/run_pipeline.py` |
+| `citibike_ebike_performance_repo` | <https://github.com/JoseCCFerreira/citibike-ebike-performance-repo.git> | `http://localhost:8611` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `portugal_bike_geospatial_ml_repo` | local: `projects/portugal_bike_geospatial_ml_repo` | `http://localhost:8612` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_analytics_learning_repo` | <https://github.com/JoseCCFerreira/retail-analytics-learning-repo.git> | `http://localhost:8613` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_case_repo_with_dynamic_beginner_html` | local: `projects/retail_case_repo_with_dynamic_beginner_html` | `http://localhost:8614` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `tyrewear_intelligence_landing` | <https://github.com/JoseCCFerreira/tyrewear-intelligence.git> | `http://localhost:8615` | `app.py` | n/a |
 
 Use the `Services` view in the central panel to install dependencies, start dashboards, stop dashboards and run pipelines.
 

@@ -338,6 +338,28 @@ def git_summary(project: Project) -> dict[str, str]:
     return output
 
 
+def git_remote_url(project: Project) -> str:
+    if not (project.path / ".git").exists():
+        return ""
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            cwd=project.path,
+            check=False,
+            text=True,
+            capture_output=True,
+            timeout=10,
+        )
+        return result.stdout.strip()
+    except Exception:
+        return ""
+
+
+def display_repo_link(project: Project) -> str:
+    remote = git_remote_url(project)
+    return remote or relative(project.path)
+
+
 def status_color(status: str) -> str:
     return "#16a34a" if status == "clean" else "#dc2626"
 
@@ -637,6 +659,7 @@ def render_project_cards(projects: list[Project]) -> None:
                 "databases": len(inv["databases"]),
                 "size_mb": inv["size_mb"],
                 "path": relative(project.path),
+                "repo": display_repo_link(project),
                 "url": f"http://localhost:{service_config(project)['port']}" if service_config(project) else "n/a",
                 "running": bool(port_pid(int(service_config(project)["port"]))) if service_config(project) else False,
             }
@@ -650,6 +673,7 @@ def render_project_cards(projects: list[Project]) -> None:
                 <div class="status-pill" style="background:{color}">{row["status"]}</div>
                 <div class="project-title">{row["project"]}</div>
                 <div class="project-path">{row["path"]}</div>
+                <div class="project-path">repo: {row["repo"]}</div>
                 <div class="project-path">dashboard: {row["url"]} · {'running' if row["running"] else 'stopped'}</div>
                 <div class="card-metrics">
                     <div class="mini-metric"><strong>{row["docs"]}</strong><span>docs</span></div>
@@ -712,6 +736,7 @@ def render_access_links(projects: list[Project]) -> None:
             {
                 "project": context.get("title", project.name),
                 "folder": relative(project.path),
+                "repository": display_repo_link(project),
                 "dashboard": f"http://localhost:{port}",
                 "service_status": "running" if port_pid(port) else "stopped",
                 "app_entrypoint": cfg["app"],
@@ -724,6 +749,10 @@ def render_access_links(projects: list[Project]) -> None:
         with cols[idx % 3]:
             st.markdown(f"**{row['project']}**")
             st.caption(row["folder"])
+            if row["repository"].startswith("http"):
+                st.link_button("Open repository", row["repository"])
+            else:
+                st.caption(f"Local repository: {row['repository']}")
             st.link_button("Open dashboard", row["dashboard"], disabled=row["service_status"] != "running")
 
 
@@ -734,7 +763,12 @@ def render_project_context(project: Project) -> None:
         return
     cfg = service_config(project)
     dashboard = f"http://localhost:{cfg['port']}" if cfg else "n/a"
+    repository = display_repo_link(project)
     st.subheader(context["title"])
+    if repository.startswith("http"):
+        st.link_button("Open repository", repository)
+    else:
+        st.caption(f"Local repository: {repository}")
     st.link_button("Open project dashboard", dashboard, disabled=not (cfg and port_pid(int(cfg["port"]))))
     sections = [
         ("Creation and purpose", "creation"),

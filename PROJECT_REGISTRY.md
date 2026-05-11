@@ -4,14 +4,14 @@ This central repository organizes the local projects inside `projects/`.
 
 ## Projects
 
-| Project | Purpose | Main Stack | Dashboard |
+| Project | Purpose | Repository | Dashboard |
 | --- | --- | --- | --- |
-| `global_fuel_shocks_intelligence_repo` | Global fuel shocks, events, volatility, forecasting and geo context | Python, DuckDB, dbt, Streamlit, ML | `http://localhost:8610` |
-| `citibike_ebike_performance_repo` | E-bike and urban mobility performance analytics | Python, SQL, Streamlit, analytics | `http://localhost:8611` |
-| `portugal_bike_geospatial_ml_repo` | Bike and mobility geospatial machine learning for Portugal | Python, SQL, ML, maps | `http://localhost:8612` |
-| `retail_analytics_learning_repo` | End-to-end retail analytics learning path | SQLite, DuckDB, dbt, Streamlit, ML | `http://localhost:8613` |
-| `retail_case_repo_with_dynamic_beginner_html` | Guided retail case with beginner-friendly HTML documentation | SQLite, DuckDB, HTML docs, ML | `http://localhost:8614` |
-| `tyrewear_intelligence_landing` | Tyre wear intelligence, statistics, ML and decision support | DuckDB, dbt, Streamlit, ML, docs | `http://localhost:8615` |
+| `global_fuel_shocks_intelligence_repo` | Global fuel shocks, events, volatility, forecasting and geo context | <https://github.com/JoseCCFerreira/global-fuel-shocks-intelligence.git> | `http://localhost:8610` |
+| `citibike_ebike_performance_repo` | E-bike and urban mobility performance analytics | <https://github.com/JoseCCFerreira/citibike-ebike-performance-repo.git> | `http://localhost:8611` |
+| `portugal_bike_geospatial_ml_repo` | Bike and mobility geospatial machine learning for Portugal | local only | `http://localhost:8612` |
+| `retail_analytics_learning_repo` | End-to-end retail analytics learning path | <https://github.com/JoseCCFerreira/retail-analytics-learning-repo.git> | `http://localhost:8613` |
+| `retail_case_repo_with_dynamic_beginner_html` | Guided retail case with beginner-friendly HTML documentation | local only | `http://localhost:8614` |
+| `tyrewear_intelligence_landing` | Tyre wear intelligence, statistics, ML and decision support | <https://github.com/JoseCCFerreira/tyrewear-intelligence.git> | `http://localhost:8615` |
 
 ## Central Hub Contract
 
