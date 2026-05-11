@@ -1,4 +1,4 @@
-# Project Registry
+# Projects_data_eng_science_analyst Registry
 
 This central repository organizes the local projects inside `projects/`.
 

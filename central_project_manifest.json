@@ -1,6 +1,6 @@
 {
   "central_hub": {
-    "name": "Central Project Hub",
+    "name": "Projects_data_eng_science_analyst",
     "path": ".",
     "dashboard": "http://localhost:8600",
     "app": "project_manager_app.py",
