@@ -25,3 +25,4 @@
 - Changed the central Streamlit panel to a light background and added a dedicated `Projects` view with repository, dashboard, app and pipeline access.
 - Forced a light Streamlit theme and improved contrast for cards, metrics, expanders, tables, tabs, buttons and HTML hero sections.
 - Rewrote the README as the main `Projects_data_eng_science_analyst` repository page with diagrams, dashboard links, project explanations, math/statistics/ML context and bilingual descriptions.
+- Added a LinkedIn presentation pack with English/Portuguese posts, carousel script, technical summary and Featured section text.

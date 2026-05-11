@@ -258,6 +258,7 @@ ML: clustering, supervised learning, deep-learning pages and tyre recommendation
 
 ## Documentation Links
 
+- LinkedIn presentation pack: [linkedin/](linkedin/)
 - English visual guide: [docs/en/VISUAL_GUIDE.md](docs/en/VISUAL_GUIDE.md)
 - Portuguese visual guide: [docs/pt/GUIA_VISUAL.md](docs/pt/GUIA_VISUAL.md)
 - HTML home: [docs_html/index.html](docs_html/index.html)
