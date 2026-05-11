@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv*/
+.streamlit/
+
+# Os projetos vivem fisicamente dentro da casa-mae, mas mantêm o seu Git proprio.
+# O repositorio central documenta e orquestra; nao versiona o conteudo interno deles.
+projects/*/
+!projects/.gitkeep
+
+learning_materials/

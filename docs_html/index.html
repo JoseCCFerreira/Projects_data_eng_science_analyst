@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projecto Central</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Projecto Central</h1>
+      <p>Repositorio-mae para navegar projetos, aprender a stack de dados ponta a ponta e consultar resultados, documentacao, bases de dados e graficos.</p>
+    </section>
+    <nav class="nav">
+      <a href="concepts.html">Academia da Stack</a>
+      <a href="projects.html">Projetos</a>
+      <a href="results.html">Resultados</a>
+      <a href="roadmap.html">Como Trabalhar</a>
+    </nav>
+    <section class="grid">
+      <article class="card">
+        <h2>Servico Streamlit</h2>
+        <p>A dashboard central corre em Streamlit e descobre os repositorios em <code>projects/</code>, lendo docs, dados, bases DuckDB/SQLite e estado Git.</p>
+        <pre>streamlit run project_manager_app.py --server.port 8600</pre>
+      </article>
+      <article class="card">
+        <h2>Repositorio Central</h2>
+        <p>A raiz versiona a documentacao, o servico central, o registo de projetos e o changelog global. Cada subprojeto mantem o seu proprio Git.</p>
+      </article>
+      <article class="card">
+        <h2>Mapa Mental</h2>
+        <p>Git controla mudancas, SQLite guarda transacoes relacionais, DuckDB analisa colunas grandes, dbt transforma, Python modela, Streamlit apresenta.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
