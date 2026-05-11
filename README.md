@@ -1,22 +1,24 @@
-# Projecto Central
+# Central Project Hub
 
-Repositorio central dos projetos de dados, analytics, machine learning, documentacao, bases de dados e resultados.
+Central repository for the local data, analytics, machine learning, documentation, database and dashboard portfolio.
 
-## Estrutura
+This repository is the access layer. The individual project repositories remain inside `projects/` and keep their own Git history.
+
+## Structure
 
 ```text
 Projecto/
-  projects/             # Repositórios Git ativos
-  learning_materials/   # PDFs, scripts e materiais de apoio soltos
-  docs_html/            # Documentacao HTML central
-  project_manager_app.py # Dashboard Streamlit central
+  projects/              # Individual Git repositories
+  learning_materials/    # Loose PDFs, scripts and study materials
+  docs_html/             # Central English HTML documentation
+  project_manager_app.py # Central Streamlit access panel
   requirements-manager.txt
-  PROJECT_REGISTRY.md   # Inventario dos projetos
-  README.md             # Este índice
-  CHANGELOG.md          # Registo de alterações da pasta principal
+  PROJECT_REGISTRY.md    # Project inventory and service map
+  README.md
+  CHANGELOG.md
 ```
 
-## Dashboard Central
+## Run The Central Access Panel
 
 ```bash
 python3 -m venv .venv-manager
@@ -25,26 +27,40 @@ pip install -r requirements-manager.txt
 streamlit run project_manager_app.py --server.port 8600
 ```
 
-A dashboard permite consultar projetos, documentação, ficheiros de dados, bases DuckDB/SQLite, gráficos rápidos, estado Git, resultados e uma academia explicativa da stack.
+Open:
 
-## Executar Projetos Individualmente
+```text
+http://localhost:8600
+```
 
-Na vista `Serviços`, cada projeto pode ser arrancado individualmente:
+The central panel gives access to:
 
-| Projeto | Porta | App |
-| --- | ---: | --- |
-| `global_fuel_shocks_intelligence_repo` | 8610 | `app.py` |
-| `citibike_ebike_performance_repo` | 8611 | `streamlit/app.py` |
-| `portugal_bike_geospatial_ml_repo` | 8612 | `streamlit/app.py` |
-| `retail_analytics_learning_repo` | 8613 | `streamlit/app.py` |
-| `retail_case_repo_with_dynamic_beginner_html` | 8614 | `streamlit/app.py` |
-| `tyrewear_intelligence_landing` | 8615 | `app.py` |
+- all project folders and dashboards
+- Git status and latest commit
+- documentation and HTML guides
+- CSV, Excel, Parquet and JSON data files
+- DuckDB and SQLite databases
+- quick charts from tabular data
+- project service start/stop controls
+- pipeline execution logs
+- mathematical, statistical, programming and machine-learning explanations
 
-O manager cria um ambiente `.venv-manager` dentro de cada projeto quando carregas em `Install / Update Dependencies`. Depois podes usar `Start App`, `Stop App` e `Run Pipeline` diretamente na dashboard.
+## Project Dashboard Links
 
-## Documentacao HTML Central
+| Project | Dashboard | App entrypoint | Pipeline |
+| --- | --- | --- | --- |
+| `global_fuel_shocks_intelligence_repo` | `http://localhost:8610` | `app.py` | `scripts/run_pipeline.py` |
+| `citibike_ebike_performance_repo` | `http://localhost:8611` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `portugal_bike_geospatial_ml_repo` | `http://localhost:8612` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_analytics_learning_repo` | `http://localhost:8613` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `retail_case_repo_with_dynamic_beginner_html` | `http://localhost:8614` | `streamlit/app.py` | `python/run_pipeline.py` |
+| `tyrewear_intelligence_landing` | `http://localhost:8615` | `app.py` | n/a |
 
-Abre diretamente no browser:
+Use the `Services` view in the central panel to install dependencies, start dashboards, stop dashboards and run pipelines.
+
+## Central HTML Documentation
+
+Open these files directly in a browser or through the `Central HTML` view:
 
 - `docs_html/index.html`
 - `docs_html/concepts.html`
@@ -54,20 +70,12 @@ Abre diretamente no browser:
 - `docs_html/results.html`
 - `docs_html/roadmap.html`
 
-Estas paginas reorganizam a documentacao global para explicar Git, dbt, SQLite relacional, DuckDB, statistical analysis, machine learning, Streamlit, resultados e projetos, em portugues e ingles quando aplicavel.
+The documentation explains the full journey: creation context, Git, relational SQLite, DuckDB, dbt, programming, code structure, mathematical/statistical theory, machine learning, Streamlit dashboards, results and interpretation.
 
-## Repositórios
+## Repository Policy
 
-- `projects/global_fuel_shocks_intelligence_repo` - Global Fuel Shocks Intelligence.
-- `projects/citibike_ebike_performance_repo` - Análise de performance e-bike Citibike.
-- `projects/portugal_bike_geospatial_ml_repo` - Geospatial ML para bicicletas em Portugal.
-- `projects/retail_analytics_learning_repo` - Retail analytics learning project.
-- `projects/retail_case_repo_with_dynamic_beginner_html` - Retail case com guias HTML.
-- `projects/tyrewear_intelligence_landing` - Tyre wear intelligence landing/app.
-
-## Convenção
-
-- Novos repositórios devem entrar em `projects/`.
-- Materiais de estudo ou ficheiros avulsos ficam em `learning_materials/`.
-- Alterações estruturais nesta pasta devem ser registadas em `CHANGELOG.md`.
-- Cada projeto em `projects/` mantem o seu proprio repositorio Git; o repositorio central versiona a orquestracao, documentacao e servico.
+- New projects belong in `projects/`.
+- Loose study files belong in `learning_materials/`.
+- The central repository versions orchestration, documentation and the access service.
+- Each project inside `projects/` keeps its own Git repository and history.
+- Structural changes in the central hub must be recorded in `CHANGELOG.md`.

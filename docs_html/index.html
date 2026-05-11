@@ -1,42 +1,51 @@
 <!doctype html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projecto Central</title>
+  <title>Central Project Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="shell">
     <section class="hero">
-      <h1>Projecto Central</h1>
-      <p>Repositorio-mae para navegar projetos, aprender a stack de dados ponta a ponta e consultar resultados, documentacao, bases de dados e graficos.</p>
+      <h1>Central Project Hub</h1>
+      <p>A single access panel for all local data projects, dashboards, databases, documentation, charts, code, mathematics, statistics and machine-learning results.</p>
     </section>
     <nav class="nav">
-      <a href="concepts.html">Academia da Stack</a>
-      <a href="theory.html">Matematica & Estatistica</a>
-      <a href="services.html">Servicos</a>
-      <a href="projects.html">Projetos</a>
-      <a href="results.html">Resultados</a>
-      <a href="roadmap.html">Como Trabalhar</a>
+      <a href="concepts.html">Stack Academy</a>
+      <a href="theory.html">Math & Statistics</a>
+      <a href="services.html">Dashboard Access</a>
+      <a href="projects.html">Projects</a>
+      <a href="results.html">Results</a>
+      <a href="roadmap.html">Workflow</a>
     </nav>
     <section class="grid">
       <article class="card">
-        <h2>Servico Streamlit</h2>
-        <p>A dashboard central corre em Streamlit e descobre os repositorios em <code>projects/</code>, lendo docs, dados, bases DuckDB/SQLite e estado Git.</p>
+        <h2>Central Streamlit Panel</h2>
+        <p>The central app discovers repositories in <code>projects/</code>, reads documentation, explores CSV/Excel/Parquet/JSON files, opens DuckDB/SQLite databases and starts individual project dashboards.</p>
         <pre>streamlit run project_manager_app.py --server.port 8600</pre>
       </article>
       <article class="card">
-        <h2>Repositorio Central</h2>
-        <p>A raiz versiona a documentacao, o servico central, o registo de projetos e o changelog global. Cada subprojeto mantem o seu proprio Git.</p>
+        <h2>Repository Model</h2>
+        <p>The root repository versions the access layer, documentation and registry. Each project inside <code>projects/</code> keeps its own Git history.</p>
       </article>
       <article class="card">
-        <h2>Mapa Mental</h2>
-        <p>Git controla mudancas, SQLite guarda transacoes relacionais, DuckDB analisa colunas grandes, dbt transforma, Python modela, Streamlit apresenta.</p>
+        <h2>End-To-End Learning</h2>
+        <p>Git tracks change, SQLite models relational transactions, DuckDB powers analytics, dbt structures SQL transformations, Python builds analysis and ML, and Streamlit presents the results.</p>
       </article>
       <article class="card">
-        <h2>Integrated Project Apps</h2>
-        <p>Each project can run individually on its own port and still be monitored from the central manager.</p>
+        <h2>Dashboard Links</h2>
+        <p>Each project has a dedicated local dashboard URL and can be started from the central panel.</p>
+        <p><a href="services.html">Open dashboard access map</a></p>
+      </article>
+      <article class="card">
+        <h2>Detailed Explanations</h2>
+        <p>The hub explains creation context, programming structure, code entrypoints, mathematical theory, statistical reasoning, machine learning and result interpretation.</p>
+      </article>
+      <article class="card">
+        <h2>Results First</h2>
+        <p>Every result should connect a reproducible data artifact, a clear chart, an interpretation and a limitation.</p>
       </article>
     </section>
   </main>

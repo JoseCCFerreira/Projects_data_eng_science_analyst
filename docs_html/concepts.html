@@ -1,89 +1,71 @@
 <!doctype html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Academia da Stack</title>
+  <title>Stack Academy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="shell">
     <section class="hero">
-      <h1>Academia da Stack</h1>
-      <p>Explicacao timtim por timtim das pecas que aparecem nos projetos: Git, dbt, SQLite relacional, DuckDB, estatistica, machine learning, Streamlit e resultados.</p>
+      <h1>Stack Academy</h1>
+      <p>A step-by-step explanation of the technical stack used across the projects: Git, dbt, relational SQLite, DuckDB, statistics, machine learning, Streamlit and results.</p>
     </section>
     <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="theory.html">Matematica & Estatistica</a>
-      <a href="services.html">Servicos</a>
-      <a href="projects.html">Projetos</a>
-      <a href="results.html">Resultados</a>
-      <a href="roadmap.html">Como Trabalhar</a>
+      <a href="index.html">Home</a>
+      <a href="theory.html">Math & Statistics</a>
+      <a href="services.html">Dashboard Access</a>
+      <a href="projects.html">Projects</a>
+      <a href="results.html">Results</a>
+      <a href="roadmap.html">Workflow</a>
     </nav>
     <section class="grid two">
       <article class="card">
         <h2>Git</h2>
-        <span class="tag">versoes</span><span class="tag">commits</span><span class="tag">historico</span>
-        <p>Git e o diario tecnico. Cada commit deve contar uma alteracao pequena, verificavel e recuperavel.</p>
-        <div class="step"><strong>1</strong><p>Ver estado: <code>git status --short</code>.</p></div>
-        <div class="step"><strong>2</strong><p>Rever mudancas: <code>git diff</code>.</p></div>
-        <div class="step"><strong>3</strong><p>Guardar: <code>git add ... && git commit -m "mensagem"</code>.</p></div>
+        <span class="tag">versioning</span><span class="tag">commits</span><span class="tag">history</span>
+        <p>Git is the technical diary. A good commit is small, testable and explains why the project changed.</p>
+        <div class="step"><strong>1</strong><p>Check the current state with <code>git status --short</code>.</p></div>
+        <div class="step"><strong>2</strong><p>Review changes with <code>git diff</code>.</p></div>
+        <div class="step"><strong>3</strong><p>Commit a coherent unit with <code>git add ... && git commit -m "message"</code>.</p></div>
       </article>
       <article class="card">
         <h2>dbt</h2>
-        <span class="tag">transformacao</span><span class="tag">linhagem</span><span class="tag">testes</span>
-        <p>dbt organiza SQL em camadas: staging para limpar, intermediate para combinar e marts para responder a perguntas de negocio.</p>
-        <div class="step"><strong>1</strong><p>Fontes entram como tabelas raw.</p></div>
-        <div class="step"><strong>2</strong><p>Modelos SQL transformam dados com nomes claros.</p></div>
-        <div class="step"><strong>3</strong><p>Testes dbt validam chaves, nulos e regras.</p></div>
+        <span class="tag">SQL transforms</span><span class="tag">lineage</span><span class="tag">tests</span>
+        <p>dbt organizes analytical SQL into layers: staging for cleaning, intermediate for logic and marts for final business questions.</p>
+        <div class="step"><strong>1</strong><p>Raw sources enter the analytical database.</p></div>
+        <div class="step"><strong>2</strong><p>SQL models transform data with readable names and clear grain.</p></div>
+        <div class="step"><strong>3</strong><p>dbt tests validate assumptions such as non-null keys and accepted values.</p></div>
       </article>
       <article class="card">
-        <h2>SQLite Relacional</h2>
-        <span class="tag">OLTP</span><span class="tag">relacoes</span><span class="tag">integridade</span>
-        <p>SQLite e ideal para explicar bases relacionais: clientes, produtos, transacoes e itens ligados por chaves.</p>
-        <div class="step"><strong>1</strong><p>Desenhar entidades e chaves primarias.</p></div>
-        <div class="step"><strong>2</strong><p>Criar relacoes com chaves estrangeiras.</p></div>
-        <div class="step"><strong>3</strong><p>Consultar com joins, filtros, agregacoes e indices.</p></div>
+        <h2>Relational SQLite</h2>
+        <span class="tag">OLTP</span><span class="tag">relations</span><span class="tag">integrity</span>
+        <p>SQLite is ideal for explaining relational databases: customers, products, stores, transactions and items connected through keys.</p>
       </article>
       <article class="card">
         <h2>DuckDB</h2>
-        <span class="tag">analytics</span><span class="tag">OLAP</span><span class="tag">ficheiros</span>
-        <p>DuckDB e o motor analitico local. Le CSV/Parquet, cria marts e responde rapidamente a perguntas agregadas.</p>
-        <div class="step"><strong>1</strong><p>Carregar dados processados.</p></div>
-        <div class="step"><strong>2</strong><p>Criar views e tabelas analiticas.</p></div>
-        <div class="step"><strong>3</strong><p>Servir Streamlit, dbt e analises Python.</p></div>
+        <span class="tag">analytics</span><span class="tag">OLAP</span><span class="tag">local engine</span>
+        <p>DuckDB is the local analytical engine. It reads files, creates views and supports fast aggregations without requiring a server.</p>
       </article>
       <article class="card">
         <h2>Statistical Analysis</h2>
-        <span class="tag">metricas</span><span class="tag">correlacao</span><span class="tag">risco</span>
-        <p>A estatistica transforma dados crus em sinais: medias, volatilidade, distribuicoes, outliers, correlacoes e estudos de eventos.</p>
-        <div class="step"><strong>1</strong><p>Descrever a amostra e cobertura.</p></div>
-        <div class="step"><strong>2</strong><p>Medir variacao, dispersao e relacoes.</p></div>
-        <div class="step"><strong>3</strong><p>Separar sinal, ruido e limites de interpretacao.</p></div>
+        <span class="tag">metrics</span><span class="tag">correlation</span><span class="tag">risk</span>
+        <p>Statistics turns raw data into measured signals: means, volatility, distributions, outliers, correlations and event windows.</p>
       </article>
       <article class="card">
         <h2>Machine Learning</h2>
-        <span class="tag">features</span><span class="tag">modelos</span><span class="tag">avaliacao</span>
-        <p>ML aprende padroes a partir de features. O ponto nao e so prever: e medir erro, interpretar importancia e comparar contra baselines.</p>
-        <div class="step"><strong>1</strong><p>Construir features sem fuga temporal.</p></div>
-        <div class="step"><strong>2</strong><p>Treinar modelos e guardar metricas.</p></div>
-        <div class="step"><strong>3</strong><p>Explicar resultados com cautela.</p></div>
+        <span class="tag">features</span><span class="tag">models</span><span class="tag">evaluation</span>
+        <p>Machine learning learns patterns from features. The goal is not just prediction; it is measured error, stability and interpretation.</p>
       </article>
       <article class="card">
         <h2>Streamlit</h2>
-        <span class="tag">app</span><span class="tag">graficos</span><span class="tag">exploracao</span>
-        <p>Streamlit e a camada interativa: filtros, tabelas, downloads, mapas e graficos para explorar outputs sem abrir notebooks.</p>
-        <div class="step"><strong>1</strong><p>Ler CSVs, DuckDB ou SQLite.</p></div>
-        <div class="step"><strong>2</strong><p>Adicionar filtros e seletores.</p></div>
-        <div class="step"><strong>3</strong><p>Mostrar resultados com Plotly e tabelas.</p></div>
+        <span class="tag">dashboard</span><span class="tag">charts</span><span class="tag">exploration</span>
+        <p>Streamlit is the interactive layer: filters, tables, downloads, maps and charts that expose project outputs.</p>
       </article>
       <article class="card">
-        <h2>Resultados</h2>
-        <span class="tag">outputs</span><span class="tag">decisao</span><span class="tag">documentacao</span>
-        <p>Resultado bom tem tres coisas: dado produzido, grafico legivel e explicacao do que significa e do que nao significa.</p>
-        <div class="step"><strong>1</strong><p>Guardar outputs versionaveis ou artefactos.</p></div>
-        <div class="step"><strong>2</strong><p>Publicar graficos e tabelas principais.</p></div>
-        <div class="step"><strong>3</strong><p>Registar metodologia e limitacoes.</p></div>
+        <h2>Results</h2>
+        <span class="tag">outputs</span><span class="tag">interpretation</span><span class="tag">limitations</span>
+        <p>A strong result has a reproducible artifact, a readable chart, a clear interpretation and an explicit limitation.</p>
       </article>
     </section>
   </main>

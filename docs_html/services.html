@@ -1,45 +1,49 @@
 <!doctype html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Servicos dos Projetos</title>
+  <title>Dashboard Access Panel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="shell">
     <section class="hero">
-      <h1>Servicos dos Projetos</h1>
-      <p>Cada projeto pode arrancar individualmente, mas continua integrado no Projecto Manager.</p>
+      <h1>Dashboard Access Panel</h1>
+      <p>Every project can run independently while remaining integrated in the central Project Manager.</p>
     </section>
     <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="concepts.html">Academia</a>
-      <a href="theory.html">Theory</a>
-      <a href="projects.html">Projetos</a>
-      <a href="results.html">Resultados</a>
+      <a href="index.html">Home</a>
+      <a href="concepts.html">Stack Academy</a>
+      <a href="theory.html">Math & Statistics</a>
+      <a href="projects.html">Projects</a>
+      <a href="results.html">Results</a>
+      <a href="roadmap.html">Workflow</a>
     </nav>
     <table>
       <thead>
-        <tr><th>Projeto</th><th>App</th><th>Pipeline</th><th>Porta</th></tr>
+        <tr><th>Project</th><th>Dashboard URL</th><th>App</th><th>Pipeline</th></tr>
       </thead>
       <tbody>
-        <tr><td>global_fuel_shocks_intelligence_repo</td><td>app.py</td><td>scripts/run_pipeline.py</td><td>8610</td></tr>
-        <tr><td>citibike_ebike_performance_repo</td><td>streamlit/app.py</td><td>python/run_pipeline.py</td><td>8611</td></tr>
-        <tr><td>portugal_bike_geospatial_ml_repo</td><td>streamlit/app.py</td><td>python/run_pipeline.py</td><td>8612</td></tr>
-        <tr><td>retail_analytics_learning_repo</td><td>streamlit/app.py</td><td>python/run_pipeline.py</td><td>8613</td></tr>
-        <tr><td>retail_case_repo_with_dynamic_beginner_html</td><td>streamlit/app.py</td><td>python/run_pipeline.py</td><td>8614</td></tr>
-        <tr><td>tyrewear_intelligence_landing</td><td>app.py</td><td>n/a</td><td>8615</td></tr>
+        <tr><td>Global Fuel Shocks Intelligence</td><td><code>http://localhost:8610</code></td><td>app.py</td><td>scripts/run_pipeline.py</td></tr>
+        <tr><td>Citibike E-Bike Performance</td><td><code>http://localhost:8611</code></td><td>streamlit/app.py</td><td>python/run_pipeline.py</td></tr>
+        <tr><td>Portugal Bike Geospatial ML</td><td><code>http://localhost:8612</code></td><td>streamlit/app.py</td><td>python/run_pipeline.py</td></tr>
+        <tr><td>Retail Analytics Learning</td><td><code>http://localhost:8613</code></td><td>streamlit/app.py</td><td>python/run_pipeline.py</td></tr>
+        <tr><td>Retail Case With Dynamic Beginner HTML</td><td><code>http://localhost:8614</code></td><td>streamlit/app.py</td><td>python/run_pipeline.py</td></tr>
+        <tr><td>Tyre Wear Intelligence</td><td><code>http://localhost:8615</code></td><td>app.py</td><td>n/a</td></tr>
       </tbody>
     </table>
     <section class="grid two">
       <article class="card">
-        <h2>Português</h2>
-        <p>No Streamlit central, abre a vista <strong>Serviços</strong>, escolhe um projeto, instala dependências se necessário, arranca a app e acompanha os logs.</p>
+        <h2>How To Start A Dashboard</h2>
+        <div class="step"><strong>1</strong><p>Open the central Streamlit panel at <code>http://localhost:8600</code>.</p></div>
+        <div class="step"><strong>2</strong><p>Go to <strong>Services</strong> and choose the project.</p></div>
+        <div class="step"><strong>3</strong><p>Click <strong>Install / Update Dependencies</strong> if the project environment is not ready.</p></div>
+        <div class="step"><strong>4</strong><p>Click <strong>Start App</strong>, then use the dashboard link.</p></div>
       </article>
       <article class="card">
-        <h2>English</h2>
-        <p>In the central Streamlit app, open <strong>Services</strong>, choose a project, install dependencies if needed, start the app and inspect logs.</p>
+        <h2>How Pipelines Fit In</h2>
+        <p>Pipelines refresh generated data, databases and outputs. Dashboards read those outputs. The central manager keeps both actions visible: run the pipeline, inspect the log, open the dashboard, then validate the result.</p>
       </article>
     </section>
   </main>

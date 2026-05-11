@@ -2,17 +2,16 @@
 
 ## 2026-05-11
 
-- Criada a pasta principal organizada em `projects/` e `learning_materials/`.
-- Movidos os repositórios Git ativos para `projects/`.
-- Movidos PDFs e TXT soltos da raiz para `learning_materials/`.
-- Criado `README.md` com índice dos repositórios e convenções.
-- Criado este registo global de alterações.
-- Melhorado o repositório `projects/global_fuel_shocks_intelligence_repo` com validação, testes, manifesto de dados mais auditável, fallbacks na app e changelog próprio.
-- Criada a dashboard Streamlit central `project_manager_app.py` para gerir projetos, documentação, dados, bases de dados, gráficos e estado Git.
-- Inicializado o conceito de repositorio central para a casa-mae `Projecto`.
-- Criada a documentacao HTML central em `docs_html/`.
-- Adicionada a academia da stack na dashboard: Git, dbt, SQLite relacional, DuckDB, statistical analysis, ML, Streamlit e resultados.
-- Criado `PROJECT_REGISTRY.md` com o inventario e contrato dos projetos dentro de `projects/`.
-- Adicionada a vista `Serviços` para instalar dependencias, arrancar/parar apps individuais e correr pipelines a partir do Projecto Manager.
-- Adicionada a vista `Teoria` bilingue com formulas, exemplos e uso nos projetos.
-- Criadas as paginas HTML `docs_html/theory.html` e `docs_html/services.html`.
+- Created the central folder structure with `projects/` and `learning_materials/`.
+- Moved active Git repositories into `projects/`.
+- Moved loose PDFs and TXT files into `learning_materials/`.
+- Created the central `README.md`, `PROJECT_REGISTRY.md` and this global changelog.
+- Improved `projects/global_fuel_shocks_intelligence_repo` with validation, tests, safer data manifest metadata, app fallbacks and its own changelog.
+- Created `project_manager_app.py` as the central Streamlit access panel for projects, documentation, data files, databases, charts and Git state.
+- Initialized the root `Projecto/` Git repository as the central hub.
+- Created central HTML documentation in `docs_html/`.
+- Added the Academy view covering Git, dbt, relational SQLite, DuckDB, statistical analysis, machine learning, Streamlit and results.
+- Added the Services view to install dependencies, start/stop individual project dashboards and run pipelines from the central panel.
+- Added the Theory view with mathematical and statistical formulas, examples and project usage.
+- Added dashboard links and project context pages for creation purpose, business context, programming, code, results and machine learning.
+- Converted the central hub interface and documentation to English.

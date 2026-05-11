@@ -1,29 +1,29 @@
 # Project Registry
 
-Este repositorio central organiza os projetos locais que vivem dentro de `projects/`.
+This central repository organizes the local projects inside `projects/`.
 
-## Projetos
+## Projects
 
-| Projeto | Foco | Stack principal | Estado |
+| Project | Purpose | Main Stack | Dashboard |
 | --- | --- | --- | --- |
-| `global_fuel_shocks_intelligence_repo` | Choques globais de combustiveis, eventos e forecasting | Python, DuckDB, dbt, Streamlit, ML | Validado com testes e pipeline checks |
-| `citibike_ebike_performance_repo` | Performance de e-bikes Citibike | Python, SQL, Streamlit, analytics | Projeto aplicado |
-| `portugal_bike_geospatial_ml_repo` | Mobilidade e geospatial ML em Portugal | Python, SQL, ML, mapas | Projeto aplicado |
-| `retail_analytics_learning_repo` | Retail analytics end-to-end | SQLite, DuckDB, dbt, Streamlit, ML | Projeto de aprendizagem |
-| `retail_case_repo_with_dynamic_beginner_html` | Retail case com guias HTML | SQLite, DuckDB, HTML docs, ML | Projeto de aprendizagem |
-| `tyrewear_intelligence_landing` | Inteligencia de desgaste de pneus | DuckDB, dbt, Streamlit, ML, docs | Projeto aplicado |
+| `global_fuel_shocks_intelligence_repo` | Global fuel shocks, events, volatility, forecasting and geo context | Python, DuckDB, dbt, Streamlit, ML | `http://localhost:8610` |
+| `citibike_ebike_performance_repo` | E-bike and urban mobility performance analytics | Python, SQL, Streamlit, analytics | `http://localhost:8611` |
+| `portugal_bike_geospatial_ml_repo` | Bike and mobility geospatial machine learning for Portugal | Python, SQL, ML, maps | `http://localhost:8612` |
+| `retail_analytics_learning_repo` | End-to-end retail analytics learning path | SQLite, DuckDB, dbt, Streamlit, ML | `http://localhost:8613` |
+| `retail_case_repo_with_dynamic_beginner_html` | Guided retail case with beginner-friendly HTML documentation | SQLite, DuckDB, HTML docs, ML | `http://localhost:8614` |
+| `tyrewear_intelligence_landing` | Tyre wear intelligence, statistics, ML and decision support | DuckDB, dbt, Streamlit, ML, docs | `http://localhost:8615` |
 
-## Contrato da casa-mae
+## Central Hub Contract
 
-1. A raiz `Projecto/` e o repositorio central explicam o sistema inteiro.
-2. Cada subprojeto mantem o seu proprio Git dentro de `projects/<nome>`.
-3. A dashboard central le documentacao, dados e bases de dados sem reescrever os subprojetos.
-4. As alteracoes globais ficam registadas em `CHANGELOG.md`.
-5. As alteracoes de cada projeto ficam no changelog do respetivo projeto, quando existir.
+1. The root `Projecto/` repository explains and operates the whole system.
+2. Every subproject keeps its own Git repository inside `projects/<name>`.
+3. The central dashboard reads documentation, data and databases without rewriting project internals.
+4. Global changes are recorded in `CHANGELOG.md`.
+5. Project-specific changes stay in the relevant project changelog when available.
 
-## Servicos Integrados
+## Integrated Services
 
-| Projeto | Porta | App | Pipeline |
+| Project | Port | App | Pipeline |
 | --- | ---: | --- | --- |
 | `global_fuel_shocks_intelligence_repo` | 8610 | `app.py` | `scripts/run_pipeline.py` |
 | `citibike_ebike_performance_repo` | 8611 | `streamlit/app.py` | `python/run_pipeline.py` |
@@ -31,3 +31,14 @@ Este repositorio central organiza os projetos locais que vivem dentro de `projec
 | `retail_analytics_learning_repo` | 8613 | `streamlit/app.py` | `python/run_pipeline.py` |
 | `retail_case_repo_with_dynamic_beginner_html` | 8614 | `streamlit/app.py` | `python/run_pipeline.py` |
 | `tyrewear_intelligence_landing` | 8615 | `app.py` | n/a |
+
+## Explanation Coverage
+
+The central hub documents each project through these lenses:
+
+- creation purpose and analytical context
+- data sources and database layer
+- programming structure and code entrypoints
+- mathematical and statistical concepts
+- machine-learning workflow and interpretation
+- dashboards, charts, results and limitations

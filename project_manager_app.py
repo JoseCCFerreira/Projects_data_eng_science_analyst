@@ -27,137 +27,96 @@ IGNORED_DIRS = {".git", ".venv", ".venv-dbt", ".venv_mac", "__pycache__", ".pyte
 
 ACADEMY_TOPICS = {
     "Git": {
-        "purpose": "Controlar versoes, commits, historico e recuperacao.",
+        "purpose": "Version control for commits, history, recovery and collaboration.",
         "steps": [
-            "Ver o estado antes de mexer: git status --short.",
-            "Ler as alteracoes: git diff.",
-            "Agrupar trabalho pequeno: git add ficheiros.",
-            "Guardar com contexto: git commit -m \"mensagem clara\".",
-            "Consultar historico: git log --oneline.",
+            "Check the repository state before changing anything: git status --short.",
+            "Read the changes carefully: git diff.",
+            "Stage a small coherent unit of work: git add files.",
+            "Save the work with context: git commit -m \"clear message\".",
+            "Inspect history when explaining the project: git log --oneline.",
         ],
-        "result": "Um historico limpo onde cada commit explica uma decisao tecnica.",
+        "result": "A clean history where each commit explains one technical decision.",
     },
     "dbt": {
-        "purpose": "Transformar dados com SQL organizado, testavel e documentado.",
+        "purpose": "Transform data with organized, testable and documented SQL.",
         "steps": [
-            "Carregar fontes raw em DuckDB ou warehouse.",
-            "Criar staging models para limpar nomes, tipos e granularidade.",
-            "Criar intermediate models para joins e regras de negocio.",
-            "Criar marts para responder a perguntas finais.",
-            "Executar dbt build para correr modelos e testes.",
+            "Load raw sources into DuckDB or another analytical warehouse.",
+            "Create staging models to clean names, types and grain.",
+            "Create intermediate models for joins and business rules.",
+            "Create marts that answer final analytical questions.",
+            "Run dbt build to execute models and tests together.",
         ],
-        "result": "Uma camada analitica com linhagem, SQL legivel e testes de qualidade.",
+        "result": "An analytical layer with lineage, readable SQL and quality tests.",
     },
-    "SQLite Relacional": {
-        "purpose": "Representar operacoes transacionais com tabelas relacionadas.",
+    "Relational SQLite": {
+        "purpose": "Represent transactional operations through related tables.",
         "steps": [
-            "Separar entidades: clientes, produtos, lojas, transacoes.",
-            "Definir primary keys e foreign keys.",
-            "Criar indices para consultas frequentes.",
-            "Consultar com joins, where, group by e window functions quando fizer sentido.",
-            "Usar SQLite para ensino, apps pequenas e exemplos OLTP.",
+            "Separate entities such as customers, products, stores and transactions.",
+            "Define primary keys and foreign keys.",
+            "Create indexes for frequent queries.",
+            "Query with joins, where clauses, group by and window functions when appropriate.",
+            "Use SQLite for teaching, compact apps and OLTP-style examples.",
         ],
-        "result": "Uma base compacta que ensina integridade relacional e consultas SQL.",
+        "result": "A compact database that teaches relational integrity and SQL querying.",
     },
     "DuckDB": {
-        "purpose": "Fazer analise local rapida sobre CSV, Parquet e tabelas grandes.",
+        "purpose": "Run fast local analytics over CSV, Parquet and larger analytical tables.",
         "steps": [
-            "Ler ficheiros diretamente ou materializar tabelas.",
-            "Criar views analiticas por tema.",
-            "Agregacoes e joins pesados passam para DuckDB.",
-            "Servir dados para Python, dbt e Streamlit.",
-            "Guardar snapshots reproduciveis em .duckdb quando necessario.",
+            "Read files directly or materialize them as tables.",
+            "Create analytical views by topic.",
+            "Move heavy joins and aggregations into DuckDB.",
+            "Serve data to Python, dbt and Streamlit.",
+            "Store reproducible .duckdb snapshots when useful.",
         ],
-        "result": "Um motor OLAP local para explorar resultados sem servidor externo.",
+        "result": "A local OLAP engine for exploring results without an external server.",
     },
     "Statistical Analysis": {
-        "purpose": "Transformar dados em sinais medidos: distribuicao, variacao, risco e relacoes.",
+        "purpose": "Turn data into measured signals: distributions, variation, risk and relationships.",
         "steps": [
-            "Ver cobertura temporal e missing values.",
-            "Calcular medias, medianas, desvios e quantis.",
-            "Analisar volatilidade, outliers e z-scores.",
-            "Medir correlacoes e estudos de eventos.",
-            "Documentar limites antes de sugerir causalidade.",
+            "Check time coverage and missing values.",
+            "Compute means, medians, standard deviations and quantiles.",
+            "Analyze volatility, outliers and z-scores.",
+            "Measure correlations and event-study windows.",
+            "Document limits before suggesting causality.",
         ],
-        "result": "Conclusoes mais honestas, com sinal separado de ruido.",
+        "result": "More honest conclusions, with signal separated from noise.",
     },
     "Machine Learning": {
-        "purpose": "Aprender padroes para previsao, classificacao ou ranking.",
+        "purpose": "Learn patterns for prediction, classification or ranking.",
         "steps": [
-            "Definir target e features sem fuga de informacao.",
-            "Separar treino e teste, idealmente respeitando tempo quando e serie temporal.",
-            "Treinar baseline e modelo principal.",
-            "Medir erro, estabilidade e importancia de features.",
-            "Explicar quando o modelo deve ou nao ser usado.",
+            "Define the target and features without information leakage.",
+            "Split train/test data, respecting time order for time series.",
+            "Train a baseline and the main model.",
+            "Measure error, stability and feature importance.",
+            "Explain when the model should and should not be used.",
         ],
-        "result": "Modelos avaliados, nao apenas treinados.",
+        "result": "Models that are evaluated, not merely trained.",
     },
     "Streamlit": {
-        "purpose": "Transformar dados e modelos numa experiencia interativa.",
+        "purpose": "Turn data and models into an interactive user experience.",
         "steps": [
-            "Carregar dados de CSV, SQLite ou DuckDB.",
-            "Criar filtros e seletores para a pergunta do utilizador.",
-            "Mostrar metricas, tabelas, graficos e downloads.",
-            "Separar paginas por fluxo de trabalho.",
-            "Usar cache para tornar a app rapida.",
+            "Load data from CSV, SQLite or DuckDB.",
+            "Create filters and selectors around the user's question.",
+            "Show metrics, tables, charts and downloads.",
+            "Separate pages by workflow.",
+            "Use caching to keep the app responsive.",
         ],
-        "result": "Uma interface pratica para explorar o projeto sem abrir codigo.",
+        "result": "A practical interface for exploring a project without opening code.",
     },
-    "Resultados": {
-        "purpose": "Fechar o ciclo entre dados, graficos, interpretacao e decisao.",
+    "Results": {
+        "purpose": "Close the loop between data, charts, interpretation and decisions.",
         "steps": [
-            "Gerar outputs reproduziveis.",
-            "Validar linhas, colunas e metricas.",
-            "Criar graficos que respondem a perguntas claras.",
-            "Escrever conclusoes com metodologia e limites.",
-            "Registar alteracoes no changelog.",
+            "Generate reproducible outputs.",
+            "Validate rows, columns and metrics.",
+            "Create charts that answer clear questions.",
+            "Write conclusions with methodology and limitations.",
+            "Record changes in the changelog.",
         ],
-        "result": "Um resultado explicavel de ponta a ponta.",
+        "result": "An end-to-end explainable result.",
     },
 }
 
 THEORY = {
-    "pt": {
-        "title": "Teoria matematica e estatistica",
-        "intro": "Esta secao liga as formulas aos projetos. A ideia e perceber o que cada metrica mede, quando usar e como interpretar.",
-        "topics": {
-            "Media, variancia e desvio padrao": {
-                "formula": "media = soma(x_i) / n; variancia = soma((x_i - media)^2) / (n - 1); desvio = sqrt(variancia)",
-                "example": "Se os crescimentos mensais forem [2, -1, 4, 0], a media e 1.25. O desvio padrao mede quanto os meses se afastam dessa media.",
-                "use": "Usado em volatilidade de combustiveis, vendas medias no retail e distribuicao de utilizacao de bicicletas.",
-            },
-            "Z-score e outliers": {
-                "formula": "z = (x - media) / desvio_padrao",
-                "example": "Um z-score de 2.8 significa que o valor esta 2.8 desvios padrao acima do comportamento medio.",
-                "use": "No projeto fuel, price_jump_flag marca choques quando a mudanca mensal tem z-score absoluto elevado.",
-            },
-            "Correlacao": {
-                "formula": "corr(X,Y) = cov(X,Y) / (std(X) * std(Y))",
-                "example": "Se preco do fuel e conflito sobem juntos, a correlacao pode ser positiva. Mas correlacao nao prova causalidade.",
-                "use": "Matrizes de correlacao nos projetos fuel, tyrewear, retail e citibike.",
-            },
-            "Regressao linear": {
-                "formula": "y = beta_0 + beta_1*x_1 + ... + erro",
-                "example": "Prever vendas usando preco, desconto e sazonalidade. beta_1 indica quanto y muda quando x_1 aumenta uma unidade.",
-                "use": "Baseline interpretavel antes de modelos mais complexos.",
-            },
-            "Classificacao e matriz de confusao": {
-                "formula": "accuracy = acertos / total; precision = TP/(TP+FP); recall = TP/(TP+FN)",
-                "example": "Num modelo que deteta choque de preco, falso positivo e avisar choque sem choque; falso negativo e falhar um choque real.",
-                "use": "Modelos de risco, fraude, churn ou price jump.",
-            },
-            "Series temporais": {
-                "formula": "retorno_t = (valor_t / valor_{t-1} - 1) * 100",
-                "example": "Se o preco passa de 100 para 110, o retorno e 10%. Se passa de 110 para 99, o retorno e -10%.",
-                "use": "Fuel forecasting, evolucao de vendas, procura por bicicletas e desgaste temporal.",
-            },
-            "Clustering": {
-                "formula": "distancia euclidiana = sqrt(soma((x_i - y_i)^2))",
-                "example": "Agrupar lojas parecidas por vendas, margem e numero de clientes.",
-                "use": "Segmentacao em retail, pneus, mobilidade e padroes de uso.",
-            },
-        },
-    },
     "en": {
         "title": "Mathematical and statistical theory",
         "intro": "This section connects formulas to the projects. The goal is to understand what each metric measures, when to use it and how to interpret it.",
@@ -198,6 +157,63 @@ THEORY = {
                 "use": "Segmentation in retail, tyres, mobility and usage patterns.",
             },
         },
+    },
+}
+
+PROJECT_CONTEXT = {
+    "global_fuel_shocks_intelligence_repo": {
+        "title": "Global Fuel Shocks Intelligence",
+        "context": "A global commodity analytics project focused on fuel prices, volatility, shock detection, wars, disasters, population and macro context.",
+        "creation": "Built as an end-to-end reproducible analytics case: public data ingestion, normalization, DuckDB storage, dbt-style marts, statistical outputs, forecasting and a Streamlit exploration layer.",
+        "programming": "Python scripts orchestrate fetch, preparation, DuckDB setup, analysis and validation. The Streamlit app reads processed outputs and database marts.",
+        "math": "Uses percentage returns, rolling volatility, z-scores, correlations, event summaries and baseline forecasting bands.",
+        "ml": "Random Forest models estimate jump-risk classification and monthly-change regression, with metrics and feature importance exported.",
+        "results": "Key outputs include statistical summaries, correlation matrices, event-study summaries, forecast baselines, model metrics and geo distributions.",
+    },
+    "citibike_ebike_performance_repo": {
+        "title": "Citibike E-Bike Performance",
+        "context": "Urban mobility analytics focused on e-bike usage, demand and performance patterns.",
+        "creation": "Created as an applied data product around bike-sharing data, with pipeline, SQL, documentation and Streamlit exploration.",
+        "programming": "Python pipeline code prepares datasets; SQL supports analytical questions; Streamlit exposes interactive exploration.",
+        "math": "Uses time aggregation, utilization metrics, distributions, comparative analysis and trend visualization.",
+        "ml": "Supports experiments around demand/performance patterns and feature-based modeling when prepared data is available.",
+        "results": "Dashboards and HTML documentation explain usage patterns, experiment outputs and operational insights.",
+    },
+    "portugal_bike_geospatial_ml_repo": {
+        "title": "Portugal Bike Geospatial ML",
+        "context": "A geospatial machine-learning project for understanding bike/mobility patterns in Portugal.",
+        "creation": "Built to connect geography, tabular analytics, model features and visual explanations.",
+        "programming": "Python scripts prepare data and models; Streamlit and HTML pages make the geographic analysis accessible.",
+        "math": "Uses spatial features, distance-style reasoning, statistical comparisons and model evaluation metrics.",
+        "ml": "Geospatial features feed machine-learning workflows for segmentation, prediction or prioritization.",
+        "results": "Outputs emphasize maps, practical ML theory, coding explanations and technical documentation.",
+    },
+    "retail_analytics_learning_repo": {
+        "title": "Retail Analytics Learning",
+        "context": "A teaching-oriented retail analytics project covering OLTP, OLAP, visualization, machine learning and governance.",
+        "creation": "Created as a full learning path from relational modeling to analytical marts, dashboards and ML.",
+        "programming": "SQLite demonstrates relational transactions; DuckDB supports analytics; Python scripts generate, process and model data.",
+        "math": "Uses sales aggregation, margin metrics, distributions, correlations, forecasting ideas and classification/regression metrics.",
+        "ml": "Includes retail ML examples such as demand signals, feature engineering, model metrics and optional deep-learning extensions.",
+        "results": "The project produces databases, processed data, Streamlit views, dbt models and extensive beginner-friendly documentation.",
+    },
+    "retail_case_repo_with_dynamic_beginner_html": {
+        "title": "Retail Case with Dynamic Beginner HTML",
+        "context": "A retail case study packaged with beginner-friendly HTML documentation and practical datasets.",
+        "creation": "Built to explain the same analytical journey in a highly guided format: raw tables, SQL, DuckDB, dashboards and ML.",
+        "programming": "Python and SQL scripts create and analyze retail data; HTML pages document the steps in an approachable way.",
+        "math": "Uses relational joins, sales KPIs, aggregation, distribution analysis and model evaluation concepts.",
+        "ml": "Covers practical feature preparation and model outputs for retail decision support.",
+        "results": "Includes CSV tables, SQLite/DuckDB databases, Streamlit apps and detailed HTML learning guides.",
+    },
+    "tyrewear_intelligence_landing": {
+        "title": "Tyre Wear Intelligence",
+        "context": "A decision-support analytics project for tyre wear, tread depth, vehicle context and recommendations.",
+        "creation": "Built as a polished applied analytics product with data exploration, dbt/DuckDB concepts, statistical tests, ML and role-based documentation.",
+        "programming": "Python and Streamlit power a multi-page analytical app; docs explain SQL, dbt, SQLite/DuckDB and modeling choices.",
+        "math": "Uses tread-depth change, statistical tests, correlations, clustering, numerical reasoning and recommendation logic.",
+        "ml": "Includes clustering, machine learning, deep-learning pages and feature-based tyre recommendations.",
+        "results": "Results appear through a Streamlit decision center, documentation pages, snapshots and export-oriented views.",
     },
 }
 
@@ -459,8 +475,8 @@ def render_hero(project_count: int, data_files: int, databases: int, docs: int) 
     st.markdown(
         f"""
         <div class="hero">
-            <h1>Projecto Manager</h1>
-            <p>{project_count} projetos · {docs} documentos · {data_files} ficheiros de dados · {databases} bases de dados</p>
+            <h1>Central Project Access Panel</h1>
+            <p>{project_count} projects · {docs} documents · {data_files} data files · {databases} databases</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -621,6 +637,8 @@ def render_project_cards(projects: list[Project]) -> None:
                 "databases": len(inv["databases"]),
                 "size_mb": inv["size_mb"],
                 "path": relative(project.path),
+                "url": f"http://localhost:{service_config(project)['port']}" if service_config(project) else "n/a",
+                "running": bool(port_pid(int(service_config(project)["port"]))) if service_config(project) else False,
             }
         )
     html = ['<div class="card-grid">']
@@ -632,10 +650,11 @@ def render_project_cards(projects: list[Project]) -> None:
                 <div class="status-pill" style="background:{color}">{row["status"]}</div>
                 <div class="project-title">{row["project"]}</div>
                 <div class="project-path">{row["path"]}</div>
+                <div class="project-path">dashboard: {row["url"]} · {'running' if row["running"] else 'stopped'}</div>
                 <div class="card-metrics">
                     <div class="mini-metric"><strong>{row["docs"]}</strong><span>docs</span></div>
-                    <div class="mini-metric"><strong>{row["data_files"]}</strong><span>dados</span></div>
-                    <div class="mini-metric"><strong>{row["databases"]}</strong><span>bases</span></div>
+                    <div class="mini-metric"><strong>{row["data_files"]}</strong><span>data</span></div>
+                    <div class="mini-metric"><strong>{row["databases"]}</strong><span>databases</span></div>
                 </div>
                 <div class="project-path" style="margin-top:12px">branch: {row["branch"]} · {row["size_mb"]} MB</div>
             </div>
@@ -647,8 +666,8 @@ def render_project_cards(projects: list[Project]) -> None:
 
 def render_academy() -> None:
     render_hero(len(list_projects()), 0, 0, len(ACADEMY_TOPICS))
-    st.subheader("Academia timtim por timtim")
-    topic = st.selectbox("Tema", list(ACADEMY_TOPICS))
+    st.subheader("Step-by-step learning center")
+    topic = st.selectbox("Topic", list(ACADEMY_TOPICS))
     content = ACADEMY_TOPICS[topic]
     st.markdown(f"### {topic}")
     st.info(content["purpose"])
@@ -664,41 +683,90 @@ def render_academy() -> None:
         )
     st.success(content["result"])
 
-    st.subheader("Onde isto aparece nos teus projetos")
+    st.subheader("Where this appears in the projects")
     mapping = pd.DataFrame(
         [
-            {"tema": "Git", "exemplos": "Todos os repositorios em projects/"},
-            {"tema": "dbt", "exemplos": "fuel, retail, tyrewear, citibike"},
-            {"tema": "SQLite Relacional", "exemplos": "retail_analytics_learning_repo, retail_case_repo"},
-            {"tema": "DuckDB", "exemplos": "fuel, retail, tyrewear"},
-            {"tema": "Statistical Analysis", "exemplos": "fuel, citibike, portugal bike, tyrewear"},
-            {"tema": "Machine Learning", "exemplos": "fuel, retail, portugal bike, citibike, tyrewear"},
-            {"tema": "Streamlit", "exemplos": "apps dos projetos e esta dashboard central"},
-            {"tema": "Resultados", "exemplos": "data/outputs, docs, docs_html, dashboards"},
+            {"topic": "Git", "examples": "Every repository inside projects/"},
+            {"topic": "dbt", "examples": "fuel, retail, tyrewear, citibike"},
+            {"topic": "Relational SQLite", "examples": "retail_analytics_learning_repo, retail_case_repo"},
+            {"topic": "DuckDB", "examples": "fuel, retail, tyrewear"},
+            {"topic": "Statistical Analysis", "examples": "fuel, citibike, portugal bike, tyrewear"},
+            {"topic": "Machine Learning", "examples": "fuel, retail, portugal bike, citibike, tyrewear"},
+            {"topic": "Streamlit", "examples": "project apps and this central dashboard"},
+            {"topic": "Results", "examples": "data/outputs, docs, docs_html, dashboards"},
         ]
     )
     st.dataframe(mapping, width="stretch", hide_index=True)
 
 
+def render_access_links(projects: list[Project]) -> None:
+    st.subheader("Dashboard access panel")
+    rows = []
+    for project in projects:
+        cfg = service_config(project)
+        context = PROJECT_CONTEXT.get(project.name, {})
+        if not cfg:
+            continue
+        port = int(cfg["port"])
+        rows.append(
+            {
+                "project": context.get("title", project.name),
+                "folder": relative(project.path),
+                "dashboard": f"http://localhost:{port}",
+                "service_status": "running" if port_pid(port) else "stopped",
+                "app_entrypoint": cfg["app"],
+                "pipeline": cfg["pipeline"] or "n/a",
+            }
+        )
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+    cols = st.columns(3)
+    for idx, row in enumerate(rows):
+        with cols[idx % 3]:
+            st.markdown(f"**{row['project']}**")
+            st.caption(row["folder"])
+            st.link_button("Open dashboard", row["dashboard"], disabled=row["service_status"] != "running")
+
+
+def render_project_context(project: Project) -> None:
+    context = PROJECT_CONTEXT.get(project.name)
+    if not context:
+        st.info("No extended project context registered yet.")
+        return
+    cfg = service_config(project)
+    dashboard = f"http://localhost:{cfg['port']}" if cfg else "n/a"
+    st.subheader(context["title"])
+    st.link_button("Open project dashboard", dashboard, disabled=not (cfg and port_pid(int(cfg["port"]))))
+    sections = [
+        ("Creation and purpose", "creation"),
+        ("Business / analytical context", "context"),
+        ("Programming and code structure", "programming"),
+        ("Mathematics and statistics", "math"),
+        ("Machine learning", "ml"),
+        ("Results and interpretation", "results"),
+    ]
+    for title, key in sections:
+        with st.expander(title, expanded=True):
+            st.write(context[key])
+
+
 def render_theory() -> None:
-    language = st.radio("Language / Idioma", ["pt", "en"], horizontal=True, format_func=lambda value: "Português" if value == "pt" else "English")
-    content = THEORY[language]
+    content = THEORY["en"]
     st.markdown(f"## {content['title']}")
     st.write(content["intro"])
     for topic, details in content["topics"].items():
         with st.expander(topic, expanded=True):
             st.markdown("**Formula**")
             st.code(details["formula"])
-            st.markdown("**Example / Exemplo**")
+            st.markdown("**Example**")
             st.write(details["example"])
-            st.markdown("**Use in projects / Uso nos projetos**")
+            st.markdown("**Use in projects**")
             st.write(details["use"])
 
 
 def render_project_service(project: Project) -> None:
     cfg = service_config(project)
     if not cfg:
-        st.info("Este projeto ainda nao tem servico configurado no manager.")
+        st.info("This project does not have a configured service yet.")
         return
     port = int(cfg["port"])
     pid = port_pid(port)
@@ -732,7 +800,7 @@ def render_project_service(project: Project) -> None:
 
 
 def render_services(projects: list[Project]) -> None:
-    st.subheader("Servicos dos projetos")
+    st.subheader("Project services")
     rows = []
     for project in projects:
         cfg = service_config(project)
@@ -750,22 +818,22 @@ def render_services(projects: list[Project]) -> None:
             }
         )
     st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
-    selected = st.selectbox("Projeto", [project for project in projects if service_config(project)], format_func=lambda project: project.name)
+    selected = st.selectbox("Project", [project for project in projects if service_config(project)], format_func=lambda project: project.name)
     render_project_service(selected)
 
 
 def render_html_docs() -> None:
-    st.subheader("Documentacao HTML central")
+    st.subheader("Central HTML documentation")
     docs = safe_walk_files(DOCS_HTML_DIR, {".html"}) if DOCS_HTML_DIR.exists() else []
     if not docs:
-        st.info("Sem paginas HTML centrais.")
+        st.info("No central HTML pages found.")
         return
-    selected = st.selectbox("Pagina", docs, format_func=relative)
+    selected = st.selectbox("Page", docs, format_func=relative)
     st.components.v1.html(read_text(selected, limit=350_000), height=760, scrolling=True)
 
 
 def render_results_center(projects: list[Project]) -> None:
-    st.subheader("Centro de resultados")
+    st.subheader("Results center")
     rows = []
     for project in projects:
         inv = project_inventory(project.path)
@@ -789,7 +857,7 @@ def render_results_center(projects: list[Project]) -> None:
         size="size_mb",
         color="databases",
         hover_name="project",
-        title="Projetos por dados, documentacao e bases",
+        title="Projects by data files, documentation and databases",
         color_continuous_scale="Tealgrn",
     )
     fig.update_layout(height=430)
@@ -824,10 +892,10 @@ def render_visual_summary(projects: list[Project]) -> None:
         int(summary["docs"].sum()),
     )
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Projetos", len(projects))
-    c2.metric("Documentos", int(summary["docs"].sum()))
-    c3.metric("Ficheiros de Dados", int(summary["data"].sum()))
-    c4.metric("Bases de Dados", int(summary["databases"].sum()))
+    c1.metric("Projects", len(projects))
+    c2.metric("Documents", int(summary["docs"].sum()))
+    c3.metric("Data Files", int(summary["data"].sum()))
+    c4.metric("Databases", int(summary["databases"].sum()))
 
     left, right = st.columns([1.4, 1])
     with left:
@@ -836,16 +904,16 @@ def render_visual_summary(projects: list[Project]) -> None:
             x="project",
             y=["docs", "data", "databases", "scripts"],
             barmode="group",
-            title="Inventário por projeto",
+            title="Project inventory",
             color_discrete_sequence=["#2563eb", "#16a34a", "#dc2626", "#9333ea"],
         )
-        fig.update_layout(height=390, legend_title_text="", xaxis_title="", yaxis_title="ficheiros")
+        fig.update_layout(height=390, legend_title_text="", xaxis_title="", yaxis_title="files")
         st.plotly_chart(fig, width="stretch")
     with right:
         totals = {
             "Docs": int(summary["docs"].sum()),
-            "Dados": int(summary["data"].sum()),
-            "Bases": int(summary["databases"].sum()),
+            "Data": int(summary["data"].sum()),
+            "Databases": int(summary["databases"].sum()),
             "Scripts": int(summary["scripts"].sum()),
         }
         fig = go.Figure(
@@ -858,50 +926,51 @@ def render_visual_summary(projects: list[Project]) -> None:
                 )
             ]
         )
-        fig.update_layout(title="Composição geral", height=390, showlegend=True)
+        fig.update_layout(title="Overall composition", height=390, showlegend=True)
         st.plotly_chart(fig, width="stretch")
 
-    st.subheader("Projetos")
+    st.subheader("Projects")
     render_project_cards(projects)
+    render_access_links(projects)
 
 
 def render_docs(project: Project) -> None:
     docs = project_inventory(project.path)["docs"]
     if not docs:
-        st.info("Sem documentação encontrada neste projeto.")
+        st.info("No documentation found for this project.")
         return
-    selected = st.selectbox("Documento", docs, format_func=relative)
+    selected = st.selectbox("Document", docs, format_func=relative)
     if selected.suffix.lower() == ".md":
         st.markdown(read_text(selected))
     elif selected.suffix.lower() in {".html", ".htm"}:
         st.components.v1.html(read_text(selected, limit=250_000), height=700, scrolling=True)
     else:
         st.write(relative(selected))
-        st.code(read_text(selected, limit=20_000) if selected.suffix.lower() == ".txt" else "PDF disponível no caminho acima.")
+        st.code(read_text(selected, limit=20_000) if selected.suffix.lower() == ".txt" else "PDF available at the path above.")
 
 
 def render_data(project: Project) -> None:
     files = project_inventory(project.path)["data"]
     if not files:
-        st.info("Sem ficheiros de dados tabulares encontrados.")
+        st.info("No tabular data files found.")
         return
-    selected = st.selectbox("Ficheiro de dados", files, format_func=relative)
+    selected = st.selectbox("Data file", files, format_func=relative)
     df = read_table(selected)
-    st.caption(f"{relative(selected)} · {len(df):,} linhas carregadas")
+    st.caption(f"{relative(selected)} · {len(df):,} loaded rows")
     st.dataframe(df.head(500), width="stretch", hide_index=True)
     numeric = df.select_dtypes(include="number")
     if not numeric.empty:
         cols = st.columns(3)
         x_options = ["index"] + list(df.columns)
-        x_col = cols[0].selectbox("Eixo X", x_options)
-        y_col = cols[1].selectbox("Eixo Y", list(numeric.columns))
-        chart_type = cols[2].selectbox("Gráfico", ["Linha", "Barras", "Dispersão", "Histograma"])
+        x_col = cols[0].selectbox("X axis", x_options)
+        y_col = cols[1].selectbox("Y axis", list(numeric.columns))
+        chart_type = cols[2].selectbox("Chart", ["Line", "Bar", "Scatter", "Histogram"])
         chart_df = df.reset_index(names="index")
-        if chart_type == "Linha":
+        if chart_type == "Line":
             fig = px.line(chart_df, x=x_col, y=y_col)
-        elif chart_type == "Barras":
+        elif chart_type == "Bar":
             fig = px.bar(chart_df.head(100), x=x_col, y=y_col)
-        elif chart_type == "Dispersão":
+        elif chart_type == "Scatter":
             fig = px.scatter(chart_df, x=x_col, y=y_col)
         else:
             fig = px.histogram(chart_df, x=y_col)
@@ -911,9 +980,9 @@ def render_data(project: Project) -> None:
 def render_databases(project: Project) -> None:
     databases = project_inventory(project.path)["databases"]
     if not databases:
-        st.info("Sem bases DuckDB/SQLite encontradas.")
+        st.info("No DuckDB/SQLite databases found.")
         return
-    selected = st.selectbox("Base de dados", databases, format_func=relative)
+    selected = st.selectbox("Database", databases, format_func=relative)
     tables = database_tables(selected)
     st.dataframe(tables, width="stretch", hide_index=True)
     if "table" in tables.columns and not tables.empty:
@@ -935,64 +1004,66 @@ def render_status(project: Project) -> None:
 
 
 def main() -> None:
-    st.set_page_config(page_title="Projecto Manager", layout="wide")
+    st.set_page_config(page_title="Central Project Access Panel", layout="wide")
     inject_style()
 
     projects = list_projects()
     if not projects:
-        st.warning("Não encontrei projetos em `projects/`.")
+        st.warning("No projects found in `projects/`.")
         return
 
-    page = st.sidebar.radio("Vista", ["Resumo", "Serviços", "Academia", "Teoria", "HTML Central", "Resultados", "Projeto", "Materiais", "Registo Global"])
+    page = st.sidebar.radio("View", ["Access Panel", "Services", "Academy", "Theory", "Central HTML", "Results", "Project", "Materials", "Global Changelog"])
 
-    if page == "Resumo":
+    if page == "Access Panel":
         render_visual_summary(projects)
         return
 
-    if page == "Serviços":
+    if page == "Services":
         render_services(projects)
         return
 
-    if page == "Academia":
+    if page == "Academy":
         render_academy()
         return
 
-    if page == "Teoria":
+    if page == "Theory":
         render_theory()
         return
 
-    if page == "HTML Central":
+    if page == "Central HTML":
         render_html_docs()
         return
 
-    if page == "Resultados":
+    if page == "Results":
         render_results_center(projects)
         return
 
-    if page == "Materiais":
-        st.subheader("Materiais de estudo")
+    if page == "Materials":
+        st.subheader("Learning materials")
         materials = safe_walk_files(LEARNING_DIR) if LEARNING_DIR.exists() else []
         st.dataframe(pd.DataFrame({"file": [relative(path) for path in materials]}), width="stretch", hide_index=True)
         return
 
-    if page == "Registo Global":
-        st.subheader("Registo global")
+    if page == "Global Changelog":
+        st.subheader("Global changelog")
         changelog = ROOT / "CHANGELOG.md"
-        st.markdown(read_text(changelog) if changelog.exists() else "Sem changelog global.")
+        st.markdown(read_text(changelog) if changelog.exists() else "No global changelog.")
         return
 
-    project = st.sidebar.selectbox("Projeto", projects, format_func=lambda item: item.name)
+    project = st.sidebar.selectbox("Project", projects, format_func=lambda item: item.name)
     inv = project_inventory(project.path)
     st.markdown(
         f"""
         <div class="hero">
             <h1>{project.name}</h1>
-            <p>{len(inv["docs"])} documentos · {len(inv["data"])} dados · {len(inv["databases"])} bases · {inv["size_mb"]} MB</p>
+            <p>{len(inv["docs"])} documents · {len(inv["data"])} data files · {len(inv["databases"])} databases · {inv["size_mb"]} MB</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
-    tab_status, tab_run, tab_docs, tab_data, tab_db = st.tabs(["Estado", "Executar", "Documentação", "Dados & Gráficos", "Bases de Dados"])
+    tab_overview, tab_status, tab_run, tab_docs, tab_data, tab_db = st.tabs(["Overview", "Status", "Run", "Documentation", "Data & Charts", "Databases"])
+    with tab_overview:
+        render_project_context(project)
     with tab_status:
         render_status(project)
     with tab_run:
