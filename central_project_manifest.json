@@ -1,0 +1,65 @@
+{
+  "central_hub": {
+    "name": "Central Project Hub",
+    "path": ".",
+    "dashboard": "http://localhost:8600",
+    "app": "project_manager_app.py",
+    "purpose": "Central access panel for all local analytics, database, documentation and machine-learning projects."
+  },
+  "projects": [
+    {
+      "name": "Global Fuel Shocks Intelligence",
+      "folder": "projects/global_fuel_shocks_intelligence_repo",
+      "repository": "https://github.com/JoseCCFerreira/global-fuel-shocks-intelligence.git",
+      "dashboard": "http://localhost:8610",
+      "app": "app.py",
+      "pipeline": "scripts/run_pipeline.py",
+      "stack": ["Python", "DuckDB", "dbt", "Streamlit", "statistics", "machine learning"]
+    },
+    {
+      "name": "Citibike E-Bike Performance",
+      "folder": "projects/citibike_ebike_performance_repo",
+      "repository": "https://github.com/JoseCCFerreira/citibike-ebike-performance-repo.git",
+      "dashboard": "http://localhost:8611",
+      "app": "streamlit/app.py",
+      "pipeline": "python/run_pipeline.py",
+      "stack": ["Python", "SQL", "Streamlit", "analytics"]
+    },
+    {
+      "name": "Portugal Bike Geospatial ML",
+      "folder": "projects/portugal_bike_geospatial_ml_repo",
+      "repository": "local",
+      "dashboard": "http://localhost:8612",
+      "app": "streamlit/app.py",
+      "pipeline": "python/run_pipeline.py",
+      "stack": ["Python", "SQL", "geospatial analysis", "machine learning", "Streamlit"]
+    },
+    {
+      "name": "Retail Analytics Learning",
+      "folder": "projects/retail_analytics_learning_repo",
+      "repository": "https://github.com/JoseCCFerreira/retail-analytics-learning-repo.git",
+      "dashboard": "http://localhost:8613",
+      "app": "streamlit/app.py",
+      "pipeline": "python/run_pipeline.py",
+      "stack": ["SQLite", "DuckDB", "dbt", "Python", "Streamlit", "machine learning"]
+    },
+    {
+      "name": "Retail Case With Dynamic Beginner HTML",
+      "folder": "projects/retail_case_repo_with_dynamic_beginner_html",
+      "repository": "local",
+      "dashboard": "http://localhost:8614",
+      "app": "streamlit/app.py",
+      "pipeline": "python/run_pipeline.py",
+      "stack": ["SQLite", "DuckDB", "Python", "Streamlit", "HTML documentation", "machine learning"]
+    },
+    {
+      "name": "Tyre Wear Intelligence",
+      "folder": "projects/tyrewear_intelligence_landing",
+      "repository": "https://github.com/JoseCCFerreira/tyrewear-intelligence.git",
+      "dashboard": "http://localhost:8615",
+      "app": "app.py",
+      "pipeline": null,
+      "stack": ["Python", "DuckDB", "dbt concepts", "Streamlit", "statistics", "machine learning"]
+    }
+  ]
+}

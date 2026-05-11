@@ -12,6 +12,9 @@ Projecto/
   learning_materials/    # Loose PDFs, scripts and study materials
   docs_html/             # Central English HTML documentation
   project_manager_app.py # Central Streamlit access panel
+  central_project_manifest.json
+  REPOSITORY_MAP.md
+  scripts/               # Operational scripts for all dashboards
   requirements-manager.txt
   PROJECT_REGISTRY.md    # Project inventory and service map
   README.md
@@ -44,6 +47,21 @@ The central panel gives access to:
 - project service start/stop controls
 - pipeline execution logs
 - mathematical, statistical, programming and machine-learning explanations
+
+## Start And Test Everything
+
+Start every project dashboard from the central repository:
+
+```bash
+source .venv-manager/bin/activate
+python scripts/start_all_dashboards.py
+```
+
+Check that the central panel and all project dashboards respond:
+
+```bash
+python scripts/check_services.py
+```
 
 ## Project Dashboard Links
 

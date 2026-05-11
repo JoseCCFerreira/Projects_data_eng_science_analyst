@@ -17,3 +17,6 @@
 - Converted the central hub interface and documentation to English.
 - Added repository links to the central access panel, README, registry and dashboard documentation.
 - Verified that all six project Streamlit dashboards start and respond successfully.
+- Added `central_project_manifest.json` as the machine-readable full portfolio map.
+- Added `REPOSITORY_MAP.md` with local paths, repository links and dashboard URLs.
+- Added operational scripts to start and test every dashboard from the central repository.
