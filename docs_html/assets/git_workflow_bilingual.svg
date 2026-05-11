@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Git Workflow / Fluxo Git</title>
+  <desc id="desc">Bilingual Git workflow: status, diff, add, commit, history.</desc>
+  <defs><style>.bg{fill:#f8fafc}.title{font:700 32px Arial;fill:#0f172a}.node{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:16}.h{font:700 18px Arial;fill:#111827}.p{font:400 14px Arial;fill:#475569}.cmd{font:700 14px Menlo,monospace;fill:#0f766e}.arrow{stroke:#0f766e;stroke-width:4;fill:none;marker-end:url(#a)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/></marker></defs>
+  <rect class="bg" width="1200" height="520"/><text x="60" y="70" class="title">Git Workflow / Fluxo Git</text>
+  <g transform="translate(60,160)"><rect class="node" width="180" height="130"/><text x="24" y="40" class="h">1. Check</text><text x="24" y="68" class="cmd">git status</text><text x="24" y="96" class="p">Ver estado</text></g>
+  <g transform="translate(285,160)"><rect class="node" width="180" height="130"/><text x="24" y="40" class="h">2. Review</text><text x="24" y="68" class="cmd">git diff</text><text x="24" y="96" class="p">Rever mudanças</text></g>
+  <g transform="translate(510,160)"><rect class="node" width="180" height="130"/><text x="24" y="40" class="h">3. Stage</text><text x="24" y="68" class="cmd">git add</text><text x="24" y="96" class="p">Preparar ficheiros</text></g>
+  <g transform="translate(735,160)"><rect class="node" width="180" height="130"/><text x="24" y="40" class="h">4. Commit</text><text x="24" y="68" class="cmd">git commit</text><text x="24" y="96" class="p">Guardar versão</text></g>
+  <g transform="translate(960,160)"><rect class="node" width="180" height="130"/><text x="24" y="40" class="h">5. Explain</text><text x="24" y="68" class="cmd">git log</text><text x="24" y="96" class="p">Explicar histórico</text></g>
+  <path class="arrow" d="M240 225 L285 225"/><path class="arrow" d="M465 225 L510 225"/><path class="arrow" d="M690 225 L735 225"/><path class="arrow" d="M915 225 L960 225"/>
+  <text x="60" y="380" class="p">English: each project keeps its own Git history; the central hub versions orchestration and documentation.</text>
+  <text x="60" y="410" class="p">Português: cada projeto mantém o seu Git; o hub central versiona orquestração e documentação.</text>
+</svg>

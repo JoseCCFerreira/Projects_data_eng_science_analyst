@@ -20,3 +20,5 @@
 - Added `central_project_manifest.json` as the machine-readable full portfolio map.
 - Added `REPOSITORY_MAP.md` with local paths, repository links and dashboard URLs.
 - Added operational scripts to start and test every dashboard from the central repository.
+- Added bilingual SVG diagrams explaining the central hub, projects, data pipeline, Git workflow, mathematical/statistical/ML concepts and dashboard access.
+- Added English and Portuguese visual guides in Markdown and HTML.

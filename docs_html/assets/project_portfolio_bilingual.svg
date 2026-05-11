@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Project Portfolio / Portfólio de Projetos</title>
+  <desc id="desc">Six project cards with dashboard ports, repository status and analytical focus.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 34px Arial,sans-serif;fill:#0f172a}.subtitle{font:400 17px Arial,sans-serif;fill:#475569}
+      .card{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:16}.h{font:700 20px Arial,sans-serif;fill:#111827}.p{font:400 15px Arial,sans-serif;fill:#334155}
+      .port{font:700 18px Arial,sans-serif;fill:#0f766e}.tag{fill:#eef2ff;stroke:#c7d2fe;rx:9}.tagText{font:700 12px Arial,sans-serif;fill:#3730a3}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="900"/>
+  <text x="70" y="70" class="title">Project Portfolio / Portfólio de Projetos</text>
+  <text x="70" y="104" class="subtitle">All projects remain individually runnable and integrated through the central access panel / Todos os projetos correm individualmente e ficam integrados no painel central</text>
+
+  <g transform="translate(70,155)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Global Fuel Shocks</text><text x="24" y="73" class="port">Dashboard: 8610</text><text x="24" y="105" class="p">Fuel prices, volatility, shocks, events</text><text x="24" y="130" class="p">Combustíveis, volatilidade e eventos</text><rect x="24" y="150" width="76" height="24" class="tag"/><text x="62" y="167" text-anchor="middle" class="tagText">DuckDB</text><rect x="110" y="150" width="54" height="24" class="tag"/><text x="137" y="167" text-anchor="middle" class="tagText">ML</text><rect x="174" y="150" width="86" height="24" class="tag"/><text x="217" y="167" text-anchor="middle" class="tagText">Streamlit</text>
+  </g>
+  <g transform="translate(505,155)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Citibike E-Bike</text><text x="24" y="73" class="port">Dashboard: 8611</text><text x="24" y="105" class="p">Urban mobility and e-bike performance</text><text x="24" y="130" class="p">Mobilidade urbana e performance</text><rect x="24" y="150" width="70" height="24" class="tag"/><text x="59" y="167" text-anchor="middle" class="tagText">Python</text><rect x="104" y="150" width="52" height="24" class="tag"/><text x="130" y="167" text-anchor="middle" class="tagText">SQL</text><rect x="166" y="150" width="86" height="24" class="tag"/><text x="209" y="167" text-anchor="middle" class="tagText">Analytics</text>
+  </g>
+  <g transform="translate(940,155)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Portugal Bike Geo ML</text><text x="24" y="73" class="port">Dashboard: 8612</text><text x="24" y="105" class="p">Geospatial mobility and ML</text><text x="24" y="130" class="p">Mobilidade geoespacial e ML</text><rect x="24" y="150" width="74" height="24" class="tag"/><text x="61" y="167" text-anchor="middle" class="tagText">Maps</text><rect x="108" y="150" width="54" height="24" class="tag"/><text x="135" y="167" text-anchor="middle" class="tagText">ML</text><rect x="172" y="150" width="70" height="24" class="tag"/><text x="207" y="167" text-anchor="middle" class="tagText">Python</text>
+  </g>
+  <g transform="translate(70,405)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Retail Analytics Learning</text><text x="24" y="73" class="port">Dashboard: 8613</text><text x="24" y="105" class="p">End-to-end retail learning path</text><text x="24" y="130" class="p">Percurso completo de retail analytics</text><rect x="24" y="150" width="70" height="24" class="tag"/><text x="59" y="167" text-anchor="middle" class="tagText">SQLite</text><rect x="104" y="150" width="76" height="24" class="tag"/><text x="142" y="167" text-anchor="middle" class="tagText">DuckDB</text><rect x="190" y="150" width="46" height="24" class="tag"/><text x="213" y="167" text-anchor="middle" class="tagText">dbt</text>
+  </g>
+  <g transform="translate(505,405)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Retail Case HTML</text><text x="24" y="73" class="port">Dashboard: 8614</text><text x="24" y="105" class="p">Guided beginner retail case</text><text x="24" y="130" class="p">Caso retail guiado para iniciantes</text><rect x="24" y="150" width="62" height="24" class="tag"/><text x="55" y="167" text-anchor="middle" class="tagText">HTML</text><rect x="96" y="150" width="70" height="24" class="tag"/><text x="131" y="167" text-anchor="middle" class="tagText">SQLite</text><rect x="176" y="150" width="54" height="24" class="tag"/><text x="203" y="167" text-anchor="middle" class="tagText">ML</text>
+  </g>
+  <g transform="translate(940,405)">
+    <rect class="card" width="390" height="190"/><text x="24" y="42" class="h">Tyre Wear Intelligence</text><text x="24" y="73" class="port">Dashboard: 8615</text><text x="24" y="105" class="p">Tread depth, statistics, ML decisions</text><text x="24" y="130" class="p">Desgaste, estatística e decisão ML</text><rect x="24" y="150" width="96" height="24" class="tag"/><text x="72" y="167" text-anchor="middle" class="tagText">Statistics</text><rect x="130" y="150" width="54" height="24" class="tag"/><text x="157" y="167" text-anchor="middle" class="tagText">ML</text><rect x="194" y="150" width="86" height="24" class="tag"/><text x="237" y="167" text-anchor="middle" class="tagText">Streamlit</text>
+  </g>
+  <text x="70" y="705" class="subtitle">Repository links / Links dos repositórios: GitHub where available; local-only projects are still managed and runnable from this hub.</text>
+  <text x="70" y="735" class="subtitle">Every dashboard has a dedicated port and can be started from Services / Cada dashboard tem porta própria e pode arrancar em Services.</text>
+</svg>

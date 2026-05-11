@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Central Project Hub Architecture / Arquitetura do Repositório Central</title>
+  <desc id="desc">Bilingual architecture diagram showing the central repository, Streamlit access panel, documentation, manifest, service scripts and project repositories.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 34px Arial,sans-serif;fill:#0f172a}.subtitle{font:400 18px Arial,sans-serif;fill:#475569}
+      .box{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:14}.core{fill:#0f172a;stroke:#0f172a}.coreText{font:700 24px Arial,sans-serif;fill:#fff}
+      .h{font:700 19px Arial,sans-serif;fill:#111827}.p{font:400 15px Arial,sans-serif;fill:#334155}.small{font:400 13px Arial,sans-serif;fill:#64748b}
+      .arrow{stroke:#0f766e;stroke-width:4;fill:none;marker-end:url(#arrow)}.tag{fill:#ecfdf5;stroke:#99f6e4;rx:10}.tagText{font:700 13px Arial,sans-serif;fill:#115e59}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <text x="70" y="70" class="title">Central Project Hub / Repositório Central</text>
+  <text x="70" y="104" class="subtitle">One access layer for dashboards, documentation, data, databases, code and results / Uma camada de acesso para dashboards, documentação, dados, bases, código e resultados</text>
+
+  <rect x="480" y="175" width="440" height="170" rx="18" class="core"/>
+  <text x="700" y="230" text-anchor="middle" class="coreText">Projecto/</text>
+  <text x="700" y="266" text-anchor="middle" class="coreText">Central Access Panel</text>
+  <text x="700" y="302" text-anchor="middle" class="coreText">Painel Central</text>
+
+  <rect x="70" y="175" width="310" height="150" class="box"/>
+  <text x="95" y="215" class="h">Streamlit Manager</text>
+  <text x="95" y="245" class="p">Start/stop project apps</text>
+  <text x="95" y="270" class="p">Run pipelines and inspect logs</text>
+  <text x="95" y="295" class="p">Arranca apps e pipelines</text>
+
+  <rect x="1020" y="175" width="310" height="150" class="box"/>
+  <text x="1045" y="215" class="h">Documentation</text>
+  <text x="1045" y="245" class="p">HTML + Markdown guides</text>
+  <text x="1045" y="270" class="p">English and Portuguese</text>
+  <text x="1045" y="295" class="p">Guias HTML + Markdown</text>
+
+  <rect x="70" y="445" width="310" height="150" class="box"/>
+  <text x="95" y="485" class="h">Manifest + Registry</text>
+  <text x="95" y="515" class="p">central_project_manifest.json</text>
+  <text x="95" y="540" class="p">PROJECT_REGISTRY.md</text>
+  <text x="95" y="565" class="p">Mapa central dos projetos</text>
+
+  <rect x="545" y="445" width="310" height="150" class="box"/>
+  <text x="570" y="485" class="h">Project Repositories</text>
+  <text x="570" y="515" class="p">Fuel, Citibike, Portugal Bike</text>
+  <text x="570" y="540" class="p">Retail, Retail Case, Tyre Wear</text>
+  <text x="570" y="565" class="p">Repositórios dentro de projects/</text>
+
+  <rect x="1020" y="445" width="310" height="150" class="box"/>
+  <text x="1045" y="485" class="h">Data + Results</text>
+  <text x="1045" y="515" class="p">CSV, Excel, DuckDB, SQLite</text>
+  <text x="1045" y="540" class="p">Charts, ML metrics, outputs</text>
+  <text x="1045" y="565" class="p">Dados, gráficos e resultados</text>
+
+  <path class="arrow" d="M380 250 C430 250 430 250 480 250"/>
+  <path class="arrow" d="M920 250 C970 250 970 250 1020 250"/>
+  <path class="arrow" d="M225 445 C225 360 480 340 560 335"/>
+  <path class="arrow" d="M700 345 L700 445"/>
+  <path class="arrow" d="M1175 445 C1175 360 920 340 840 335"/>
+
+  <rect x="160" y="690" width="215" height="42" class="tag"/><text x="268" y="716" text-anchor="middle" class="tagText">Git history / Histórico Git</text>
+  <rect x="430" y="690" width="215" height="42" class="tag"/><text x="538" y="716" text-anchor="middle" class="tagText">Dashboards / Painéis</text>
+  <rect x="700" y="690" width="215" height="42" class="tag"/><text x="808" y="716" text-anchor="middle" class="tagText">Theory / Teoria</text>
+  <rect x="970" y="690" width="215" height="42" class="tag"/><text x="1078" y="716" text-anchor="middle" class="tagText">Results / Resultados</text>
+</svg>

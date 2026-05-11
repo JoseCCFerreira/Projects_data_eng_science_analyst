@@ -11,6 +11,9 @@ Projecto/
   projects/              # Individual Git repositories
   learning_materials/    # Loose PDFs, scripts and study materials
   docs_html/             # Central English HTML documentation
+  docs_html/assets/      # Versioned explanatory SVG diagrams
+  docs/en/               # English Markdown documentation
+  docs/pt/               # Portuguese Markdown documentation
   project_manager_app.py # Central Streamlit access panel
   central_project_manifest.json
   REPOSITORY_MAP.md
@@ -81,6 +84,8 @@ Use the `Services` view in the central panel to install dependencies, start dash
 Open these files directly in a browser or through the `Central HTML` view:
 
 - `docs_html/index.html`
+- `docs_html/visuals.html`
+- `docs_html/visuals_pt.html`
 - `docs_html/concepts.html`
 - `docs_html/theory.html`
 - `docs_html/services.html`
@@ -89,6 +94,14 @@ Open these files directly in a browser or through the `Central HTML` view:
 - `docs_html/roadmap.html`
 
 The documentation explains the full journey: creation context, Git, relational SQLite, DuckDB, dbt, programming, code structure, mathematical/statistical theory, machine learning, Streamlit dashboards, results and interpretation.
+
+## Visual Documentation
+
+Versioned diagrams are stored in `docs_html/assets/` and referenced from:
+
+- English: `docs/en/VISUAL_GUIDE.md`
+- Portuguese: `docs/pt/GUIA_VISUAL.md`
+- HTML: `docs_html/visuals.html` and `docs_html/visuals_pt.html`
 
 ## Repository Policy
 

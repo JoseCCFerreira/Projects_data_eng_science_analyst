@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard Access / Acesso aos Dashboards</title>
+  <desc id="desc">Bilingual diagram listing central and project dashboard URLs.</desc>
+  <defs><style>.bg{fill:#f8fafc}.title{font:700 32px Arial;fill:#0f172a}.url{font:700 18px Menlo,monospace;fill:#0f766e}.card{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:14}.h{font:700 18px Arial;fill:#111827}.p{font:400 14px Arial;fill:#475569}</style></defs>
+  <rect class="bg" width="1400" height="560"/><text x="70" y="70" class="title">Dashboard Access / Acesso aos Dashboards</text>
+  <g transform="translate(70,125)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Central Hub / Painel Central</text><text x="22" y="68" class="url">http://localhost:8600</text></g>
+  <g transform="translate(505,125)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Fuel Shocks</text><text x="22" y="68" class="url">http://localhost:8610</text></g>
+  <g transform="translate(940,125)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Citibike E-Bike</text><text x="22" y="68" class="url">http://localhost:8611</text></g>
+  <g transform="translate(70,260)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Portugal Bike Geo ML</text><text x="22" y="68" class="url">http://localhost:8612</text></g>
+  <g transform="translate(505,260)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Retail Analytics Learning</text><text x="22" y="68" class="url">http://localhost:8613</text></g>
+  <g transform="translate(940,260)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Retail Case HTML</text><text x="22" y="68" class="url">http://localhost:8614</text></g>
+  <g transform="translate(505,395)"><rect class="card" width="395" height="95"/><text x="22" y="36" class="h">Tyre Wear Intelligence</text><text x="22" y="68" class="url">http://localhost:8615</text></g>
+  <text x="70" y="520" class="p">English: start all dashboards with scripts/start_all_dashboards.py. Português: arranca todos com scripts/start_all_dashboards.py.</text>
+</svg>

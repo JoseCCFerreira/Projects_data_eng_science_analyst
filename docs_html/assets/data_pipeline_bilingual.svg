@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title desc">
+  <title id="title">Data Pipeline / Pipeline de Dados</title>
+  <desc id="desc">Bilingual end-to-end data pipeline from sources to results.</desc>
+  <defs>
+    <style>.bg{fill:#f8fafc}.title{font:700 32px Arial;fill:#0f172a}.box{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:14}.h{font:700 18px Arial;fill:#111827}.p{font:400 14px Arial;fill:#475569}.arrow{stroke:#0f766e;stroke-width:4;fill:none;marker-end:url(#a)}</style>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="520"/>
+  <text x="70" y="70" class="title">Data Pipeline / Pipeline de Dados</text>
+  <g transform="translate(70,150)"><rect class="box" width="180" height="135"/><text x="22" y="42" class="h">Sources</text><text x="22" y="70" class="p">APIs, CSV, Excel</text><text x="22" y="95" class="p">Fontes públicas</text></g>
+  <g transform="translate(300,150)"><rect class="box" width="180" height="135"/><text x="22" y="42" class="h">Raw Data</text><text x="22" y="70" class="p">Original extracts</text><text x="22" y="95" class="p">Dados brutos</text></g>
+  <g transform="translate(530,150)"><rect class="box" width="180" height="135"/><text x="22" y="42" class="h">Processing</text><text x="22" y="70" class="p">Python cleaning</text><text x="22" y="95" class="p">Limpeza Python</text></g>
+  <g transform="translate(760,150)"><rect class="box" width="180" height="135"/><text x="22" y="42" class="h">Databases</text><text x="22" y="70" class="p">SQLite, DuckDB</text><text x="22" y="95" class="p">Bases analíticas</text></g>
+  <g transform="translate(990,150)"><rect class="box" width="180" height="135"/><text x="22" y="42" class="h">Models</text><text x="22" y="70" class="p">dbt, stats, ML</text><text x="22" y="95" class="p">Estatística e ML</text></g>
+  <g transform="translate(1220,150)"><rect class="box" width="150" height="135"/><text x="22" y="42" class="h">Results</text><text x="22" y="70" class="p">Dashboards</text><text x="22" y="95" class="p">Resultados</text></g>
+  <path class="arrow" d="M250 218 L300 218"/><path class="arrow" d="M480 218 L530 218"/><path class="arrow" d="M710 218 L760 218"/><path class="arrow" d="M940 218 L990 218"/><path class="arrow" d="M1170 218 L1220 218"/>
+  <text x="70" y="380" class="p">English: pipelines turn external data into validated outputs, charts and decisions.</text>
+  <text x="70" y="410" class="p">Português: pipelines transformam dados externos em outputs validados, gráficos e decisões.</text>
+</svg>
