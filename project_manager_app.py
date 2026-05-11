@@ -370,10 +370,29 @@ def inject_style() -> None:
         <style>
         .stApp {
             background: #f8fafc;
+            color: #111827;
+        }
+        html, body, [class*="css"] {
+            color: #111827;
         }
         .block-container {
             padding-top: 2rem;
             padding-bottom: 3rem;
+        }
+        section[data-testid="stSidebar"] {
+            background: #ffffff;
+            border-right: 1px solid #e5e7eb;
+        }
+        section[data-testid="stSidebar"] * {
+            color: #111827;
+        }
+        div[data-testid="stMarkdownContainer"],
+        div[data-testid="stMarkdownContainer"] p,
+        div[data-testid="stMarkdownContainer"] li,
+        label,
+        span,
+        p {
+            color: #111827;
         }
         [data-testid="stMetric"] {
             background: #ffffff;
@@ -381,6 +400,10 @@ def inject_style() -> None:
             border-radius: 8px;
             padding: 14px 16px;
             box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+            color: #111827;
+        }
+        [data-testid="stMetric"] * {
+            color: #111827;
         }
         .hero {
             border: 1px solid #e5e7eb;
@@ -408,6 +431,10 @@ def inject_style() -> None:
             padding: 16px;
             min-height: 182px;
             box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+            color: #111827;
+        }
+        .project-card * {
+            color: #111827;
         }
         .project-title {
             font-weight: 700;
@@ -417,7 +444,7 @@ def inject_style() -> None:
             overflow-wrap: anywhere;
         }
         .project-path {
-            color: #6b7280;
+            color: #334155;
             font-size: .8rem;
             margin-bottom: 12px;
             overflow-wrap: anywhere;
@@ -426,10 +453,14 @@ def inject_style() -> None:
             display: inline-block;
             border-radius: 999px;
             padding: 3px 9px;
-            color: white;
+            color: #ffffff;
             font-size: .76rem;
             font-weight: 700;
             margin-bottom: 10px;
+        }
+        .status-pill,
+        .status-pill * {
+            color: #ffffff;
         }
         .card-grid {
             display: grid;
@@ -447,6 +478,7 @@ def inject_style() -> None:
             border-radius: 8px;
             padding: 8px;
             background: #f9fafb;
+            color: #111827;
         }
         .mini-metric strong {
             display: block;
@@ -454,7 +486,7 @@ def inject_style() -> None:
             font-size: 1.05rem;
         }
         .mini-metric span {
-            color: #6b7280;
+            color: #334155;
             font-size: .72rem;
         }
         .step {
@@ -467,6 +499,7 @@ def inject_style() -> None:
             padding: 12px;
             background: #fff;
             margin: 9px 0;
+            color: #111827;
         }
         .step strong {
             display: inline-flex;
@@ -476,10 +509,44 @@ def inject_style() -> None:
             height: 32px;
             border-radius: 8px;
             background: #0f766e;
-            color: white;
+            color: #ffffff;
+        }
+        .step strong,
+        .step strong * {
+            color: #ffffff;
         }
         .step p {
             margin: 3px 0 0;
+            color: #111827;
+        }
+        div[data-testid="stExpander"] {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            color: #111827;
+        }
+        div[data-testid="stExpander"] * {
+            color: #111827;
+        }
+        div[data-testid="stDataFrame"] {
+            background: #ffffff;
+            color: #111827;
+        }
+        div[data-testid="stTabs"] button,
+        div[data-testid="stTabs"] button p {
+            color: #111827;
+        }
+        .stButton button,
+        .stLinkButton a {
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+        }
+        .stButton button:hover,
+        .stLinkButton a:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+            border-color: #94a3b8;
         }
         @media (max-width: 1100px) {
             .card-grid {

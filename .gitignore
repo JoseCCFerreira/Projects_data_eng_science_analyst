@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 .venv*/
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
 logs/
 
 # Os projetos vivem fisicamente dentro da casa-mae, mas mantêm o seu Git proprio.

@@ -23,3 +23,4 @@
 - Added bilingual SVG diagrams explaining the central hub, projects, data pipeline, Git workflow, mathematical/statistical/ML concepts and dashboard access.
 - Added English and Portuguese visual guides in Markdown and HTML.
 - Changed the central Streamlit panel to a light background and added a dedicated `Projects` view with repository, dashboard, app and pipeline access.
+- Forced a light Streamlit theme and improved contrast for cards, metrics, expanders, tables, tabs, buttons and HTML hero sections.
