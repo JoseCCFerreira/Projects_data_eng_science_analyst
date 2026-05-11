@@ -368,6 +368,9 @@ def inject_style() -> None:
     st.markdown(
         """
         <style>
+        .stApp {
+            background: #f8fafc;
+        }
         .block-container {
             padding-top: 2rem;
             padding-bottom: 3rem;
@@ -383,9 +386,10 @@ def inject_style() -> None:
             border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 22px 24px;
-            background: linear-gradient(135deg, #0f172a 0%, #1f2937 52%, #14532d 100%);
-            color: white;
+            background: #ffffff;
+            color: #111827;
             margin-bottom: 20px;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
         }
         .hero h1 {
             margin: 0 0 6px 0;
@@ -394,7 +398,7 @@ def inject_style() -> None:
         }
         .hero p {
             margin: 0;
-            color: #d1d5db;
+            color: #475569;
             font-size: 1rem;
         }
         .project-card {
@@ -756,6 +760,32 @@ def render_access_links(projects: list[Project]) -> None:
             st.link_button("Open dashboard", row["dashboard"], disabled=row["service_status"] != "running")
 
 
+def render_projects_page(projects: list[Project]) -> None:
+    st.subheader("Projects")
+    rows = []
+    for project in projects:
+        cfg = service_config(project)
+        context = PROJECT_CONTEXT.get(project.name, {})
+        port = int(cfg["port"]) if cfg else None
+        rows.append(
+            {
+                "project": context.get("title", project.name),
+                "folder": relative(project.path),
+                "repository": display_repo_link(project),
+                "dashboard": f"http://localhost:{port}" if port else "n/a",
+                "status": "running" if port and port_pid(port) else "stopped",
+                "app": cfg["app"] if cfg else "n/a",
+                "pipeline": cfg["pipeline"] if cfg and cfg.get("pipeline") else "n/a",
+            }
+        )
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+
+    for project in projects:
+        context = PROJECT_CONTEXT.get(project.name, {"title": project.name})
+        with st.expander(context["title"], expanded=False):
+            render_project_context(project)
+
+
 def render_project_context(project: Project) -> None:
     context = PROJECT_CONTEXT.get(project.name)
     if not context:
@@ -1046,10 +1076,14 @@ def main() -> None:
         st.warning("No projects found in `projects/`.")
         return
 
-    page = st.sidebar.radio("View", ["Access Panel", "Services", "Academy", "Theory", "Central HTML", "Results", "Project", "Materials", "Global Changelog"])
+    page = st.sidebar.radio("View", ["Access Panel", "Projects", "Services", "Academy", "Theory", "Central HTML", "Results", "Project Detail", "Materials", "Global Changelog"])
 
     if page == "Access Panel":
         render_visual_summary(projects)
+        return
+
+    if page == "Projects":
+        render_projects_page(projects)
         return
 
     if page == "Services":

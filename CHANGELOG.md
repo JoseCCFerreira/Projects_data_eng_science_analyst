@@ -22,3 +22,4 @@
 - Added operational scripts to start and test every dashboard from the central repository.
 - Added bilingual SVG diagrams explaining the central hub, projects, data pipeline, Git workflow, mathematical/statistical/ML concepts and dashboard access.
 - Added English and Portuguese visual guides in Markdown and HTML.
+- Changed the central Streamlit panel to a light background and added a dedicated `Projects` view with repository, dashboard, app and pipeline access.
