@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stack Quick Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Stack Quick Reference</h1>
+      <p>What each technology is, what it is used for, when to use it, where it appears and how to start practicing.</p>
+    </section>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="stack_reference_pt.html">Português</a>
+      <a href="concepts.html">Stack Academy</a>
+      <a href="theory.html">Math & Statistics</a>
+      <a href="services.html">Dashboards</a>
+    </nav>
+    <section class="grid two">
+      <article class="card"><h2>PL/SQL</h2><p>Oracle procedural SQL for procedures, functions, triggers, loops and exception handling. Use it when business logic must live close to an Oracle database.</p><pre>BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello PL/SQL');
+END;
+/</pre></article>
+      <article class="card"><h2>Git</h2><p>Version control for code, documentation and project history. Use it after every coherent tested change.</p><pre>git status --short
+git diff
+git add .
+git commit -m "message"</pre></article>
+      <article class="card"><h2>SQL + SQLite</h2><p>Relational querying and lightweight local OLTP-style databases for learning tables, keys and joins.</p><pre>SELECT customer_id, SUM(total)
+FROM transactions
+GROUP BY customer_id;</pre></article>
+      <article class="card"><h2>DuckDB</h2><p>Local analytical database for CSV/Parquet, aggregations, marts and dashboard backends.</p><pre>SELECT * FROM read_csv_auto('data.csv');</pre></article>
+      <article class="card"><h2>dbt</h2><p>SQL transformation framework for staging, intermediate and mart models with tests and lineage.</p><pre>dbt debug
+dbt build
+dbt docs generate</pre></article>
+      <article class="card"><h2>Statistics</h2><p>Measured evidence: means, variance, z-scores, correlations, distributions and event studies.</p><pre>z = (x - mean) / std</pre></article>
+      <article class="card"><h2>Machine Learning</h2><p>Feature-based prediction, classification, clustering, recommendations and model interpretation.</p><pre>features -> model -> metrics -> limits</pre></article>
+      <article class="card"><h2>Streamlit</h2><p>Interactive dashboards for charts, filters, tables, downloads and model exploration.</p><pre>streamlit run app.py --server.port 8610</pre></article>
+    </section>
+  </main>
+</body>
+</html>

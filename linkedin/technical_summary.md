@@ -42,6 +42,7 @@ Central portfolio hub for data engineering, data science, analytics engineering 
 - Python
 - pandas
 - SQL
+- PL/SQL reference material
 - SQLite
 - DuckDB
 - dbt concepts
@@ -59,5 +60,6 @@ Central portfolio hub for data engineering, data science, analytics engineering 
 - dashboard deployment locally
 - statistics and ML interpretation
 - project documentation
+- quick reference documentation for PL/SQL, Git, SQL/SQLite, DuckDB, dbt, statistics, ML and Streamlit
 - operational thinking
 - portfolio architecture

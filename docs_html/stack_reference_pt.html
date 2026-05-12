@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Referência Rápida Da Stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Referência Rápida Da Stack</h1>
+      <p>O que é cada tecnologia, para que é utilizada, quando usar, onde aparece e como começar a praticar.</p>
+    </section>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="stack_reference.html">English</a>
+      <a href="concepts.html">Stack Academy</a>
+      <a href="theory.html">Matemática & Estatística</a>
+      <a href="services.html">Dashboards</a>
+    </nav>
+    <section class="grid two">
+      <article class="card"><h2>PL/SQL</h2><p>SQL procedural da Oracle para procedures, functions, triggers, ciclos e tratamento de exceções. Usa quando a lógica deve viver perto da base Oracle.</p><pre>BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello PL/SQL');
+END;
+/</pre></article>
+      <article class="card"><h2>Git</h2><p>Controlo de versões para código, documentação e histórico de projeto. Usa depois de cada alteração coerente e testada.</p><pre>git status --short
+git diff
+git add .
+git commit -m "message"</pre></article>
+      <article class="card"><h2>SQL + SQLite</h2><p>Consultas relacionais e base local leve para aprender tabelas, chaves e joins.</p><pre>SELECT customer_id, SUM(total)
+FROM transactions
+GROUP BY customer_id;</pre></article>
+      <article class="card"><h2>DuckDB</h2><p>Base analítica local para CSV/Parquet, agregações, marts e dashboards.</p><pre>SELECT * FROM read_csv_auto('data.csv');</pre></article>
+      <article class="card"><h2>dbt</h2><p>Framework de transformação SQL para modelos staging, intermediate e marts com testes e lineage.</p><pre>dbt debug
+dbt build
+dbt docs generate</pre></article>
+      <article class="card"><h2>Estatística</h2><p>Evidência medida: médias, variância, z-scores, correlações, distribuições e estudos de eventos.</p><pre>z = (x - media) / desvio</pre></article>
+      <article class="card"><h2>Machine Learning</h2><p>Previsão, classificação, clustering, recomendações e interpretação de modelos com features.</p><pre>features -> model -> metrics -> limits</pre></article>
+      <article class="card"><h2>Streamlit</h2><p>Dashboards interativos para gráficos, filtros, tabelas, downloads e exploração de modelos.</p><pre>streamlit run app.py --server.port 8610</pre></article>
+    </section>
+  </main>
+</body>
+</html>

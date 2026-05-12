@@ -73,6 +73,7 @@ Stack:
 
 - Python
 - SQL
+- PL/SQL quick reference
 - SQLite
 - DuckDB
 - dbt concepts
@@ -81,6 +82,10 @@ Stack:
 - statistics
 - machine learning
 - Git
+
+Message:
+
+The repository does not only show dashboards; it also explains the technologies used to build and govern data projects.
 
 ## Slide 8 - Mathematics And ML
 

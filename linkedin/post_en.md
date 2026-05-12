@@ -11,6 +11,7 @@ This repository is not just a collection of notebooks. It is a central access la
 
 - Streamlit dashboards
 - SQL and relational modeling
+- PL/SQL quick reference material
 - SQLite and DuckDB databases
 - dbt-style analytics engineering
 - data pipelines
@@ -38,6 +39,7 @@ What I wanted to demonstrate:
 - how SQL, Python, dbt, statistics and ML connect in real workflows
 - how dashboards can make technical projects easier to explore
 - how documentation can turn a codebase into something understandable
+- how database concepts such as SQL, PL/SQL, SQLite and DuckDB fit different use cases
 
 The repository includes diagrams explaining:
 

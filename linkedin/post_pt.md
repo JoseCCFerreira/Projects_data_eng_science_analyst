@@ -11,6 +11,7 @@ Este repositório não é apenas uma coleção de notebooks. É uma camada centr
 
 - dashboards em Streamlit
 - SQL e modelação relacional
+- referência rápida de PL/SQL
 - bases SQLite e DuckDB
 - analytics engineering com abordagem dbt
 - pipelines de dados
@@ -38,6 +39,7 @@ O objetivo foi demonstrar:
 - como SQL, Python, dbt, estatística e ML se ligam em fluxos reais
 - como dashboards tornam projetos técnicos mais fáceis de explorar
 - como documentação transforma código num produto compreensível
+- como SQL, PL/SQL, SQLite e DuckDB entram em contextos diferentes
 
 O repositório inclui diagramas sobre:
 
