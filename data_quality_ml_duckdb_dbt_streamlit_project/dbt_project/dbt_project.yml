@@ -1,0 +1,17 @@
+name: 'data_quality_ml_duckdb_dbt_streamlit_project'
+version: '1.0.0'
+config-version: 2
+profile: 'data_quality_ml_duckdb'
+
+model-paths: ['models']
+seed-paths: []
+macro-paths: []
+
+models:
+  data_quality_ml_duckdb_dbt_streamlit_project:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

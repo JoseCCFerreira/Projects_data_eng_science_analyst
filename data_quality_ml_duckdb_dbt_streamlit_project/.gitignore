@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/raw/*.csv
+data/transactional/*.db
+data/analytical/*.duckdb
+models/*.pkl
+models/*.joblib
+.ipynb_checkpoints/
+logs/
+target/
+dbt_packages/

@@ -1,0 +1,75 @@
+version: 2
+
+sources:
+  - name: main
+    tables:
+      - name: sensor_readings
+      - name: sensors
+      - name: machines
+      - name: locations
+      - name: machine_status
+
+models:
+  - name: stg_sensor_readings
+    description: "Staging layer para dados de leituras de sensores"
+    columns:
+      - name: reading_id
+        tests:
+          - not_null
+          - unique
+      - name: sensor_id
+        tests:
+          - not_null
+      - name: machine_id
+        tests:
+          - not_null
+      - name: machine_status
+        tests:
+          - accepted_values:
+              values: ['running', 'idle', 'maintenance', 'fault', 'Unknown']
+
+  - name: int_clean_sensor_readings
+    description: "Camada intermediária onde os valores fora de alcance são convertidos para null para limpeza posterior."
+    columns:
+      - name: reading_id
+        tests:
+          - not_null
+      - name: sensor_id
+        tests:
+          - not_null
+      - name: machine_id
+        tests:
+          - not_null
+
+  - name: fact_sensor_measurements
+    description: "Fact table principal para análises de desempenho e modelagem preditiva."
+    columns:
+      - name: reading_id
+        tests:
+          - not_null
+          - unique
+      - name: sensor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_sensor')
+              field: sensor_id
+      - name: machine_id
+        tests:
+          - not_null
+
+  - name: dim_sensor
+    description: "Tabela de dimensão de sensores, usada para análises e joins."
+    columns:
+      - name: sensor_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_date
+    description: "Tabela de dimensão de data para análises temporais."
+    columns:
+      - name: date_day
+        tests:
+          - not_null
+          - unique

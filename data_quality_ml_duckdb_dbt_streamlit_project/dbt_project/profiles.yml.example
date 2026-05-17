@@ -1,0 +1,9 @@
+data_quality_ml_duckdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/analytical/analytics.duckdb
+      schema: main
+      threads: 1
+      extensions: []

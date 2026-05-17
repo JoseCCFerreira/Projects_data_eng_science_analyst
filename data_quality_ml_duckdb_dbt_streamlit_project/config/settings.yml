@@ -1,0 +1,26 @@
+paths:
+  raw: data/raw/sensor_readings.csv
+  sqlite_db: data/transactional/transactional.db
+  duckdb: data/analytical/analytics.duckdb
+  clean_csv: data/processed/clean_sensor_readings.csv
+  resampled_hourly: data/processed/resampled_hourly.csv
+  resampled_daily: data/processed/resampled_daily.csv
+  filtered_csv: data/processed/filtered_sensor_readings.csv
+  clustering_export: data/exports/clustering_results.csv
+  prediction_export: data/exports/predictions.csv
+  logs: logs/project.log
+
+parameters:
+  start_date: '2024-01-01'
+  end_date: '2024-04-30'
+  n_sensors: 12
+  n_machines: 4
+  locations:
+    - East Plant
+    - West Plant
+    - North Bay
+    - South Yard
+  missing_rate: 0.04
+  outlier_rate: 0.02
+  duplicate_rate: 0.01
+  irregularity_rate: 0.08

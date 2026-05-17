@@ -12,3 +12,5 @@ projects/*/
 !projects/.gitkeep
 
 learning_materials/
+# Ignore large model artifacts
+data_quality_ml_duckdb_dbt_streamlit_project/models/

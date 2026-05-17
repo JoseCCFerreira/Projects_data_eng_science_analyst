@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Instruções — Limpeza e Recriação de Ambientes</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:28px;color:#111}
+    h1{font-size:20px}
+    pre{background:#f6f8fa;padding:12px;border-radius:6px;overflow:auto}
+    section{margin-bottom:18px}
+    .note{color:#555}
+  </style>
+</head>
+<body>
+  <h1>Instruções rápidas — Limpeza e Recriação de Ambientes</h1>
+
+  <section>
+    <strong>Resumo do que existe</strong>
+    <ul>
+      <li>Script de limpeza e compressão: <code>scripts/cleanup_optimize.py</code></li>
+      <li>Script para recriar ambientes: <code>scripts/recreate_envs.sh</code></li>
+      <li>Backups criados:</li>
+      <ul>
+        <li><code>projects/venv_removal_backup_20260515_220444/</code> — lista de venvs, requisitos copiados</li>
+        <li><code>projects/cleanup_backups_20260515_220649/</code> — DBs arquivados e CSVs originais</li>
+      </ul>
+    </ul>
+  </section>
+
+  <section>
+    <strong>Como recriar todos os ambientes (rápido)</strong>
+    <p>Execute no terminal a partir do diretório raiz do projecto:</p>
+    <pre><code class="language-bash">bash scripts/recreate_envs.sh /Users/carlosferreira/Projecto/projects/venv_removal_backup_20260515_220444</code></pre>
+    <p class="note">O script cria cada venv no caminho original, actualiza <code>pip</code> e tenta instalar os requisitos (de <code>requirements.txt</code> ou <code>pyproject.toml</code>).</p>
+  </section>
+
+  <section>
+    <strong>Como correr o cleanup (dry-run e real)</strong>
+    <p>Dry-run (ver o que aconteceria):</p>
+    <pre><code class="language-bash">python3 scripts/cleanup_optimize.py --root projects --min-csv-mb 10 --dry-run</code></pre>
+    <p>Execução real:</p>
+    <pre><code class="language-bash">python3 scripts/cleanup_optimize.py --root projects --min-csv-mb 10</code></pre>
+    <p class="note">O script faz backup automático dos ficheiros que modifica dentro de <code>--root</code> (pasta <code>cleanup_backups_YYYYMMDD_HHMMSS</code>).</p>
+  </section>
+
+  <section>
+    <strong>Restaurar apenas alguns ambientes</strong>
+    <ol>
+      <li>Edite <code>projects/venv_removal_backup_20260515_220444/venv_to_remove_ordered.txt</code> e mantenha só as linhas dos ambientes que quer recriar.</li>
+      <li>Chame o script com o mesmo backup dir (o script lê esse ficheiro):</li>
+    </ol>
+    <pre><code class="language-bash">bash scripts/recreate_envs.sh /Users/carlosferreira/Projecto/projects/venv_removal_backup_20260515_220444</code></pre>
+  </section>
+
+  <section>
+    <strong>Dicas e notas de segurança</strong>
+    <ul>
+      <li>Antes de eliminar ficheiros, verifique os backups criados em <code>projects/cleanup_backups_*</code> e <code>projects/venv_removal_backup_*</code>.</li>
+      <li>Conversão para Parquet usa <code>pyarrow</code>. Se não estiver instalado, o script fará fallback para gzip.
+        Para instalar: <code>pip install pyarrow</code>.</li>
+      <li>Os ambientes virtuais ocupavam vários GB — o script de recriação instala pacotes conforme os ficheiros de requisitos, pode demorar.</li>
+      <li>Se preferir usar <code>poetry</code> ou <code>pipenv</code>, diga-me para adaptar <code>scripts/recreate_envs.sh</code>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <strong>Se algo correr mal</strong>
+    <ol>
+      <li>Verifique os backups em <code>projects/cleanup_backups_*</code> — os ficheiros originais foram copiados antes de serem removidos.</li>
+      <li>Se um venv falhar ao instalar, execute manualmente dentro do venv: <code>source &lt;venv_path&gt;/bin/activate && pip install -r requirements.txt</code></li>
+      <li>Peça-me para adaptar o processo (ex.: restaurar só DBs, mover ficheiros para cloud, ou reverter uma execução específica).</li>
+    </ol>
+  </section>
+
+  <footer class="note">Gerado automaticamente — scripts disponíveis: <code>scripts/cleanup_optimize.py</code> e <code>scripts/recreate_envs.sh</code>.</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+pandas
+numpy
+duckdb
+dbt-core
+dbt-duckdb
+streamlit
+plotly
+scikit-learn
+scipy
+matplotlib
+seaborn
+pyyaml
+joblib
+statsmodels
+sqlalchemy
